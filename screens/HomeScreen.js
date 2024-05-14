@@ -37,9 +37,9 @@ const HomeScreen = () => {
       <Text style={styles.headerText}>Rice Pest DigiBook</Text>
 
       <LinearGradient
-        colors={['#FFFFFF', '#245f42']}
-        start={{ x: 0.5, y: 0 }} // Adjust the start point as per your requirement
-        end={{ x: 0.5, y: 1.5 }}   // Adjust the end point as per your requirement
+        colors={['#C8D7CF', '#245f42']}
+        start={{ x: 0.9, y: 0.3 }} // Adjust the start point as per your requirement
+        end={{ x: 0.9, y: 0.8}}   // Adjust the end point as per your requirement
         style={styles.gradient}
       >
         <Text style={styles.howItWorksText}>How it works?</Text>
@@ -50,7 +50,7 @@ const HomeScreen = () => {
               source={require('../assets/number-one.png')} // Change this to the path of your step 1 image
               style={styles.stepImage}
             />
-            <Text style={styles.iconText}>Mobile</Text>
+            <Text style={styles.iconText}>Capture</Text>
             <Text style={styles.subText}>Access Anywhere</Text>
           </View>
           <View style={styles.iconWrapper}>
@@ -124,8 +124,8 @@ const styles = StyleSheet.create({
   },
   gradient: {
     width: '100%',
-    marginTop: 60,
-    height: 250, // Adjusted to provide space for the "How it works?" text
+    marginTop: 70,
+    height: 240, // Adjusted to provide space for the "How it works?" text
     alignItems: 'center',
     justifyContent: 'flex-start', // Changed to flex-start to align items from the top
     flexDirection: 'column', // Changed to column to align items vertically
@@ -148,19 +148,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   stepImage: {
-    marginTop: 8,
-    width: 17, // Adjust the size as per your requirement
-    height: 17, // Adjust the size as per your requirement
+    marginTop: 6,
+    width: 15, // Adjust the size as per your requirement
+    height: 15, // Adjust the size as per your requirement
   },
   iconText: {
-    marginTop: 8,
-    fontSize: 16,
+    marginTop: 16,
+    fontSize: 14,
     color: 'white', // Adjust the color as per your requirement
   },
   subText: {
     marginTop: 4,
-    fontSize: 12,
-    color: 'gray', // Adjust the color as per your requirement
+    fontSize: 10,
+    color: 'white', // Adjust the color as per your requirement
   },
   scrollView: {
     width: '100%',
@@ -170,7 +170,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginRight: 25,
     marginLeft:10,
-    marginTop: 30,
+    marginTop: 17,
   },
   infoImage: {
     width: 130, // Adjust the size as per your requirement
@@ -195,7 +195,7 @@ const styles = StyleSheet.create({
   infoTitle: {
     fontSize: 16,
     fontWeight: 'bold',
-    marginTop: -45,
+    marginTop: -55,
     marginBottom: 10, // Adjust spacing as per your requirement
     color: '#235d41', // Adjust color as per your requirement
   },
