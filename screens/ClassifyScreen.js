@@ -1,13 +1,31 @@
 import { CameraView, useCameraPermissions } from 'expo-camera';
 import { useState } from 'react';
-import { Button, StyleSheet, Text, TouchableOpacity, View, Alert } from 'react-native';
+import { Button, StyleSheet, Text, TouchableOpacity, View, Alert, Modal, ActivityIndicator, Image } from 'react-native';
 import axios from 'axios';
-import { FileSystem, Base64 } from 'expo';
 
-export default function App() {
+const LoadingModal = ({ visible }) => {
+  return (
+    <Modal
+      visible={visible}
+      transparent={true}
+      animationType="fade"
+    >
+      <View style={styles.modalContainer}>
+        <View style={styles.modalContent}>
+          <Text>Detecting Pests....</Text>
+          <ActivityIndicator size="large" color="#0000ff" />
+        </View>
+      </View>
+    </Modal>
+  );
+};
+
+export default ClassifyScreen = () => {
   const [facing, setFacing] = useState('back');
   const [permission, requestPermission] = useCameraPermissions();
   const [cameraRef, setCameraRef] = useState(null);
+  const [loading, setLoading] = useState(false);
+
 
   if (!permission) {
     // Camera permissions are still loading.
@@ -24,10 +42,12 @@ export default function App() {
     );
   }
 
+
   const capture = async () => {
     if (cameraRef) {
+      const { uri } = await cameraRef.takePictureAsync();
       const {base64} = await cameraRef.takePictureAsync(options={base64:true,skipProcessing:true});
-      Alert.alert("Checking for pests...");
+      setLoading(true);
 
       await axios({
           method: "POST",
@@ -41,48 +61,38 @@ export default function App() {
           }
       })
       .then(function(response) {
+          setLoading(false);
           console.log("Detected:");
           console.log(response.data.predictions);
 
           const detected =  response.data.predictions
           if (detected.length!==0) {
-            const pests_detected = [];
-
-            detected.forEach((pest) => {
-              if (pest.confidence>=0.50) {
-                pests_detected.push(pest)
-              }
-            });
-
-            if (pests_detected.length!==0) {
-              console.log("I am sure:");
-              console.log(pests_detected);
-              Alert.alert(`${pests_detected.length} pest(s) detected!!!`);
-            } else {
-              Alert.alert("No pest detected.");
-            }
+            Alert.alert("Pest detected.");
           } else {
             Alert.alert("No pest detected.");
           }
           
       })
       .catch(function(error) {
+        setLoading(false);
         Alert.alert("Sorry. Please try again.");
-          console.log(error.message);
+        console.log(error.message);
       });
       
     }
   }
 
+  
   return (
     <View style={styles.container}>
       <CameraView style={styles.camera} facing={facing} ref={(ref) => setCameraRef(ref)}>
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={styles.button} onPress={capture}>
-            <Text style={styles.text}>Detect Pest</Text>
+            <Text style={styles.text}>Find Pest</Text>
           </TouchableOpacity>
         </View>
       </CameraView>
+      <LoadingModal visible={loading} />
     </View>
   );
 }
@@ -110,5 +120,16 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     color: 'white',
+  },
+  modalContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  },
+  modalContent: {
+    backgroundColor: '#ffffff',
+    padding: 20,
+    borderRadius: 10,
   },
 });
