@@ -26,7 +26,7 @@ export default function App() {
 
   const capture = async () => {
     if (cameraRef) {
-      const {base64} = await cameraRef.takePictureAsync(options={base64:true,quality:0});
+      const {base64} = await cameraRef.takePictureAsync(options={base64:true,skipProcessing:true});
       Alert.alert("Checking for pests...");
 
       await axios({
@@ -41,11 +41,26 @@ export default function App() {
           }
       })
       .then(function(response) {
-          console.log("Predictions:");
+          console.log("Detected:");
           console.log(response.data.predictions);
-          if (response.data.predictions.length!==0) {
-            Alert.alert('Pest detected!!!');
 
+          const detected =  response.data.predictions
+          if (detected.length!==0) {
+            const pests_detected = [];
+
+            detected.forEach((pest) => {
+              if (pest.confidence>=0.50) {
+                pests_detected.push(pest)
+              }
+            });
+
+            if (pests_detected.length!==0) {
+              console.log("I am sure:");
+              console.log(pests_detected);
+              Alert.alert(`${pests_detected.length} pest(s) detected!!!`);
+            } else {
+              Alert.alert("No pest detected.");
+            }
           } else {
             Alert.alert("No pest detected.");
           }
