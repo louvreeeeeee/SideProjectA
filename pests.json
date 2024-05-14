@@ -1,7 +1,7 @@
 {
     "pests":[
         {
-            "name":"Brown Planthopper",
+            "name":"Brown PlantHopper",
             "tagalog_name":"kayumangging hanip/ ngusong kabayo",
             "identifying_marks":"Adults are 2.5mm-3.0mm long, brown, winged, or without wings. The legs are hairless and the hind leg has a large, mobile outgrowth.",
             "where_to_find":"Rainfed and irrigated wetland fields are preferred. It is rare in upland rice. Directsown fields are more prone to heavy damage than transplanted fields. All plant growth stages can be attacked, but the most susceptible growth stages are from early tillering to flowering. Increasing nitrogen levels, closer plant spacing, and higher relative humidity multiply BPH numbers. ",
@@ -9,12 +9,26 @@
             "life_cycle":"Eggs are laid in batches inside the leaf sheaths and on the leaf midrib. Nymphs are brown. Nymphs molt five times before turning to adult. Adults with long wings are attracted to light traps.",
             "management":{
                 "Cultural":[
-
+                    "Draining the rice field for 3-4 days is recommended during the early stage of infestation.",
+                    "Nitrogen application can be split to reduce Brown plant hopper buildup.",
+                    "Synchronous planting within 3 weeks of staggering and maintaining a free-rice period could also decrease the build-up of Brown plant hopper.",
+                    "There are varieties released by IRRI, which contain genes for Brown plant hopper resistance, like IR26, IR64, IR36, IR56, and IR72.",
+                    "Use resistant varieties like PY 3, CO 42, ADT 35, ADT 37, PTB 33 and PTB 21, Aruna, Kanaka, Karthika, Krishnaveni, Makon, Abhey, Asha, Divya.",
+                    "Avoid close planting and provide 30 cm rogue spacing at every 2.5 to 3.0 m to reduce the pest incidence."
                 ],
                 "Biological":[
-                    
+                    "Release of natural enemies like Lycosa pseudoannulata, Cyrtorhinus lividipennis adult (200 – 250 bugs/ha) during the peak incidence of brown plant hopper at 10 days interval.",
+                    "The common parasites of the eggs are the hymenopteran wasps. Eggs are preyed upon by mirid bugs and phytoseiid mites. Both eggs and nymphs are preyed upon by mirid bugs. Nymphs and adults are eaten by general predators, particularly spiders and coccinellid beetles.",
+                    "Hydrophilid and dytiscid beetles, dragonflies, damselflies, and bugs such as nepid, microveliid, and mesoveliid eat adults and nymphs that fall onto the water surface.",
+                    "Fungal pathogens also infect brown plant hoppers"
                 ],
-                "Chemical":[]
+                "Chemical":[
+                    "ETL : 2 / tiller when 1 spider / hill is present (or) 1 / tiller when spiders are not present (or) 1 hopper/ tiller in the absence of predatory spider and 2 hoppers /tiller when spider is present at 1/hill.",
+                    "Drain the water before use of insecticides and direct the spray towards the base of the plants.",
+                    "Avoid use of insecticides causing resurgence such as synthetic pyrethroids, methyl parathuion, fenthion and quinalphos.",
+                    "Spray any one of the following: Phosphamidon 40 SL 1000 ml/ha (or) Phosalone 35 EC 1500 ml/ha (or) Carbaryl 10 D 25 kg/ha (or) Methyl demeton 25 EC 1000 ml/ha (or) Acephate 75 SP 625 gm/ha (or) Chlorpyriphos 20 EC 1250 ml/ha Carbofuran 3 G 17.5 kg/ha (or) Dichlorvos 76 WSC 350 ml/ ha.",
+                    "Use of botanical methods : Neem oil 3% 15 lit/ha (or) Iluppai oil 6% 30 lit/ha (or) Neem seed kernel extract 5% 25 kg/ha"
+                ]
             }
         },
         {
@@ -26,12 +40,27 @@
             "life_cycle":"Eggs are laid in small slits made in the soft parts of the leaf sheaths. Newly laid eggs are oblong, bent, pale yellow, and barely visible. The eggs hatch into nymphs in 6-12 days.",
             "management":{
                 "Cultural":[
-
+                    "The most effective means of GLH management is to use GLH-resistant and tungro-resistant varieties like IR 50, IR 54, IR 64, CR 1009, PY 3, Co 46 and white ponni.",
+                    "Apply neem cake @ 12.5 kg/20 cent nursery as basal dose.",
+                    "Transplanting older seedlings (>3 weeks) reduces viral disease susceptibility transmitted by leafhoppers.",
+                    "Nitrogen should be applied as needed to avoid contributing to population or hindering plant recovery from plant hopper damage by applying insufficient nitrogen.",
+                    "Good weed control in the field and on the bunds removes the preferred grassy hosts of Green leaf hopper and promotes crop vigor.",
+                    "Crop rotation with a non-rice crop during the dry season decreases alternate hosts for diseases.",
+                    "Upland rice intercropped with soybean reduces the incidence of leafhoppers on rice compared to rice alone"
                 ],
                 "Biological":[
-                    
+                    "The major egg parasitoids are: Oligosita yasumatsui (Hymenoptera: Trichogrammatidae); Anagrus spp. (Hymenoptera: Mymaridae); Gonatocerus spp. (Hymenoptera: Mymaridae).",
+                    "The most abundant predator is the green mired bug Cyrtorhinus lividipennis which predate on both eggs and nymphs.",
+                    "Strepsipterans, small wasps, pipunculid flies, and nematodes parasitize both the nymphs and adults.",
+                    "They are also attacked by aquatic veliid bugs, nabid bugs, empid flies, damselflies, dragonflies, and spiders. A fungal pathogen infects both the nymphs and adults of the green leafhopper."
                 ],
-                "Chemical":[]
+                "Chemical":[
+                    "ETL : 60/25 net sweeps (or) 5/hill at vegetative stage (or) 10/hill at flowering (or) 2/hill in tungro endemic area",
+                    "Scout the field for the presence of Tungro and Green leaf hopper. Check 20 hills while walking diagonally across a transplanted field.",
+                    "Spray insecticides twice, 15 and 30 days after transplanting.",
+                    "Spray any one of the following:Fenitrothion 50 EC 80 ml (or) Phosphamidon 40 SL 50 ml (or) Fenthion 100 EC 40 ml (or) Quinalphos 25 EC 80 ml (or) Phosalone 35 EC 120 ml (or)Monocrotophos 36 SL 40 ml.",
+                    "Maintain 2.5 cm of water in the nursery and broadcast anyone of the following in 20 cents Carbofuran 3 G 3.5 kg (or) Phorate 10 G 1.0 kg (or) Quinalphos 5 G 2.0 kg"
+                ]
             }
         },
         {
@@ -99,12 +128,27 @@
             "life_cycle":"The larvae bore into the rice stems and hollow them out completely. In young plants, the central leaf whorl does not unfold, turns brownish, and dries up, although lower leaves remain green and healthy. Such symptom is referred to as deadheart. In older plants, the panicles dry up with unfilled grains and turn white. Such symptom is referred to as whitehead. Both deadheart and whitehead can easily be pulled out by hand. Older plants often break where the stem was hollowed out causing lodging.",
             "management":{
                 "Cultural":[
-
+                    "Field should be necessarily be scouted during the vulnerable crop growth stages for early detection of dead hearts and white ear.",
+                    "Removal and proper disposal of stubbles will keep the borer population low in next crop.",
+                    "Grow resistant varieties like Ratna, TKM 6, IR 20 , IR 40, IR 56, ADT 47, ADT 48, ASD 20, IR 36, ADT 44, PY 4, ADT 46, Madhu, Kanchana, Swarnapraba, karthika, Deepthi and Tellahamsa.",
+                    "Clip the tip of the seedlings before transplanting to eliminate egg masses.",
+                    "Collect and destroy the egg masses.",
+                    "Avoid close planting and continuous water stagnation at early stages.",
+                    "Pull out and destroy the affected tillers.",
+                    "Harvest the crop up to the ground level and disturb the stubbles with plough immediately after the harvest to keep the borer population low in next crop."
                 ],
                 "Biological":[
-                    
+                    "Release of egg parasitoid Trichogramma japonicum thrice at weekly interval starting 28 days after transplanting @ 5 cc (1 lakh egg parasitoids)/ha/release. followed by the release of Trichogramma japonicum at 35 and 42 DAT.",
+                    "Apply Bacillus thuringiensis var kurstaki at 2.5 kg/ha to reduce the oviposition by the stem borer.",
+                    "Release the egg cards in field during morning hours. Tie the egg cards under the leaf surface facing outside.",
+                    "Avoid spraying of chemicals on three days before and upto to seven days after field release of egg cards."
                 ],
-                "Chemical":[]
+                "Chemical":[
+                    "ETL : 2 egg masses/m2 (or) 10% dead heart at vegetative stage (or) 2% White ear at Flowering stage.",
+                    "When natural enemies of stem borers are present, application of chemical measures can be delayed or dispensed with.",
+                    "The newly hatched borer larvae must be flit with 2 rounds of quinalphos or phosphomidon at 1000ml/ha at 7 days interval.",
+                    "Spray any one of the following based on ETLs : Quinalphos 25 EC 1000 ml/ha (or) Phosphamidon 40 SL 600 ml/ha (or) Profenophos 50 EC 1000 ml/ha."
+                ]
             }
         },
         {
