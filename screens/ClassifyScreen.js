@@ -11,10 +11,10 @@ import { CameraType } from "expo-camera/build/legacy/Camera.types";
 import Feather from "@expo/vector-icons/Feather";
 
 export default () => {
-  const [type, setType] = useState(CameraType.back);
+  //const [type, setType] = useState(CameraType.back);
   const [flashMode, setFlashMode] = useState("off");
   const [pictureUri, setPictureUri] = useState("");
-  const cameraRef = useRef();
+  //const cameraRef = useRef();
 
   useEffect(() => {
     requestPermissions();
@@ -54,10 +54,10 @@ export default () => {
   return (
     <View style={styles.container}>
       <Camera
-        ref={cameraRef}
+        //ref={cameraRef}
         style={styles.camera}
-        type={type}
-        flashMode={flashMode}
+        //type={type}
+        //flashMode={flashMode}
       >
         <View style={styles.controlsContainer}>
           <Feather name="refresh-ccw" size={30} onPress={switchType} />
