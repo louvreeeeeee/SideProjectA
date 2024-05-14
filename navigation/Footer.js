@@ -29,7 +29,6 @@ const Footer = () => {
           style={[styles.icon, isFocused ? styles.activeIcon : null]}
         />
       </TouchableOpacity>
-      
     </View>
   );
 };
@@ -40,15 +39,14 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     alignItems: 'center',
     height: 60,
-    backgroundColor: 'lightgreen',
+    backgroundColor: '#225d41',
   },
   icon: {
     width: 30,
     height: 29,
   },
   activeIcon: {
-    
-    tintColor: 'red', // For example, change the icon color to red
+    tintColor: 'white', // For example, change the icon color to white when active
   },
 });
 
