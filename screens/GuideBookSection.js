@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, ScrollView, Text, StyleSheet } from 'react-native';
 
 const GuidebookSection = ({
   name,
@@ -11,7 +11,7 @@ const GuidebookSection = ({
   management
 }) => {
   return (
-    <View style={styles.section}>
+    <ScrollView style={styles.section}>
       <Text style={styles.sectionTitle}>{name}</Text>
       <Text style={styles.subTitle}>Tagalog Name: {tagalogName}</Text>
       <Text style={styles.description}>Identifying Marks: {identifyingMarks}</Text>
@@ -45,7 +45,7 @@ const GuidebookSection = ({
           </>
         )}
       </View>
-    </View>
+    </ScrollView>
   );
 };
 

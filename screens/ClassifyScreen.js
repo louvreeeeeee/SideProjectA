@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Button, StyleSheet, Text, TouchableOpacity, View, Alert, Modal, ActivityIndicator, Image, ScrollView } from 'react-native';
 import axios from 'axios';
 import pestData from '../pests.json'; // Importing pest data from JSON file
+import GuidebookSection from './GuideBookSection';
 
 
 const getImageSource = (name) => {
@@ -41,10 +42,38 @@ const formatClass = (name) => {
 
 const DetectedModal = ({ visible, data, onClose }) => {
   const uniqueClasses = Array.from(new Set(data.map(item => item.class)));
+  const [showModal,setShowModal] = useState(false);
+  const [data2, setData] = useState({
+    name:'',
+    tagalog_name:'',
+    identifying_marks:'',
+    where_to_find:'',
+    damage:'',
+    life_cycle:'',
+    management:{
+      Cultural:[],
+      Chemical:[],
+      Biological:[]
+    }
+  });
+  
 
   const openmodal = (item) => {
     console.log(item);
-    
+    pestData.pests.forEach(element => {
+      if (element.name===formatClass(item)){
+        setData({
+          name:element.name,
+          tagalog_name:element.tagalog_name,
+          identifying_marks:element.identifying_marks,
+          where_to_find:element.where_to_find,
+          damage:element.damage,
+          life_cycle:element.life_cycle,
+          management:element.management
+        });
+        setShowModal(true);
+      }
+    });
   } 
 
   return (
@@ -68,8 +97,18 @@ const DetectedModal = ({ visible, data, onClose }) => {
               </Text>
             </TouchableOpacity>
           </ScrollView>
-          
-          
+          <Modal visible={showModal}>
+            <GuidebookSection 
+              name={data2.name} 
+              tagalogName={data2.tagalog_name} 
+              identifyingMarks={data2.identifying_marks} 
+              whereToFind={data2.where_to_find} 
+              damage={data2.damage} 
+              lifeCycle={data2.life_cycle} 
+              management={data2.management}
+            />
+            <Button title="close" onPress={()=>{setShowModal(false)}}/>
+          </Modal>
       </View>
     </Modal>
   );
