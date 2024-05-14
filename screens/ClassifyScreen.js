@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Button, StyleSheet, Text, TouchableOpacity, View, Alert, Modal, ActivityIndicator, Image, ScrollView } from 'react-native';
 import axios from 'axios';
 import pestData from '../pests.json'; // Importing pest data from JSON file
+import { FontAwesome5 } from '@expo/vector-icons';
 
 
 const getImageSource = (name) => {
@@ -165,7 +166,9 @@ export default ClassifyScreen = () => {
       <CameraView style={styles.camera} facing={facing} ref={(ref) => setCameraRef(ref)}>
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={styles.button} onPress={capture}>
-            <Text style={styles.text}>Click to detect pest</Text>
+          <Text> {/* Wrap the FontAwesome5 component inside a Text component */}
+            <FontAwesome5 name="camera" size={24} color="#225d41" /> {/* Icon button */}
+          </Text>
           </TouchableOpacity>
         </View>
       </CameraView>
@@ -187,13 +190,18 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     backgroundColor: 'transparent',
-    margin: 64,
+    margin: 10,
+    marginTop:80,
+    marginLeft: 150,
   },
   button: {
-    flex: 1,
-    alignSelf: 'flex-end',
+    width: 64, // Adjust the size to make it circular
+    height: 64, // Adjust the size to make it circular
+    borderRadius: 32, // Make it circular
+    backgroundColor:'white',
+    justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor:'#225D41',
+    marginTop: 500,
   },
   text: {
     fontSize: 24,

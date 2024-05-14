@@ -73,6 +73,8 @@ const renderManagementDetails = (management) => {
 
   return (
     <View style={styles.container}>
+       <Image source={require('../assets/logo1.png')} style={styles.logo} />
+     
       <ScrollView contentContainerStyle={styles.scrollContainer}>
         <View style={styles.sectionContainer}>
           {renderPestContainers()}
@@ -156,8 +158,21 @@ const styles = StyleSheet.create({
     marginLeft: 20,
     marginBottom: 5,
     paddingHorizontal: 3,
-    
-    
+  },
+  logo: {
+    width: 220,
+    height: 60,
+    resizeMode: 'contain',
+    alignSelf: 'center',
+    marginTop: 20,
+  },
+  title: {
+    color:'#225d41',
+    fontSize: 24,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginBottom:5,
+    paddingTop:23,
   },
   bulletPoint: {
     
@@ -246,7 +261,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   closeButton: {
-    marginTop: 20,
+    marginTop: 3,
     paddingVertical: 10,
     paddingHorizontal: 20,
     backgroundColor: '#245f42',
