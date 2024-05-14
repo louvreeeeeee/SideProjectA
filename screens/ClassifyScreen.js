@@ -1,7 +1,8 @@
 import { CameraView, useCameraPermissions } from 'expo-camera';
 import { useState } from 'react';
-import { Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Button, StyleSheet, Text, TouchableOpacity, View, Alert } from 'react-native';
 import axios from 'axios';
+import { FileSystem, Base64 } from 'expo';
 
 export default function App() {
   const [facing, setFacing] = useState('back');
@@ -25,29 +26,37 @@ export default function App() {
 
   const capture = async () => {
     if (cameraRef) {
-      const photo = await cameraRef.takePictureAsync();
-      console.log(photo);
-      // Handle the taken photo (e.g., display it, save it to storage, etc.)
+      const {base64} = await cameraRef.takePictureAsync(options={base64:true,quality:0});
+      Alert.alert("Checking for pests...");
+
+      await axios({
+          method: "POST",
+          url: "https://detect.roboflow.com/common-rice-pests-philippines/11",
+          params: {
+              api_key: "nckOWyg6wnD7g24gr0Bd",
+          },
+          data: base64,
+          headers: {
+              "Content-Type": "application/x-www-form-urlencoded"
+          }
+      })
+      .then(function(response) {
+          console.log("Predictions:");
+          console.log(response.data.predictions);
+          if (response.data.predictions.length!==0) {
+            Alert.alert('Pest detected!!!');
+
+          } else {
+            Alert.alert("No pest detected.");
+          }
+          
+      })
+      .catch(function(error) {
+        Alert.alert("Sorry. Please try again.");
+          console.log(error.message);
+      });
+      
     }
-    await axios({
-        method: "POST",
-        url: "https://detect.roboflow.com/common-rice-pests-philippines/11",
-        params: {
-            api_key: "nckOWyg6wnD7g24gr0Bd",
-            image: "https://modernfarmer.com/wp-content/uploads/2021/12/shutterstock_1673668639.jpg"
-        },
-        // data: image,
-        headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
-        }
-    })
-    .then(function(response) {
-        //console.log(response.data);
-        console.log('hello');
-    })
-    .catch(function(error) {
-        console.log(error.message);
-    });
   }
 
   return (
