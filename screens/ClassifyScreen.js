@@ -1,103 +1,67 @@
-import React, { useEffect, useState, useRef } from "react";
-import { Alert, StyleSheet, View, TouchableOpacity } from "react-native";
-import {
-  Camera, 
-  requestCameraPermissionsAsync,
-  requestMicrophonePermissionsAsync,
-  getCameraPermissionsAsync,
-  getMicrophonePermissionsAsync,
-} from "expo-camera";
-import { CameraType } from "expo-camera/build/legacy/Camera.types";
-import Feather from "@expo/vector-icons/Feather";
+import { CameraView, useCameraPermissions } from 'expo-camera';
+import { useState } from 'react';
+import { Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-export default () => {
-  //const [type, setType] = useState(CameraType.back);
-  const [flashMode, setFlashMode] = useState("off");
-  const [pictureUri, setPictureUri] = useState("");
-  //const cameraRef = useRef();
+const ClassifyScreen = () => {
+  const [facing, setFacing] = useState('back');
+  const [permission, requestPermission] = useCameraPermissions();
 
-  useEffect(() => {
-    requestPermissions();
-  }, []);
+  if (!permission) {
+    // Camera permissions are still loading.
+    return <View />;
+  }
 
-  const requestPermissions = async () => {
-    await requestCameraPermissionsAsync();
-    await requestMicrophonePermissionsAsync();
-  };
-
-  const getPermissions = async () => {
-    const cameraPermission = await getCameraPermissionsAsync();
-    const microphonePermission = await getMicrophonePermissionsAsync();
-
-    return cameraPermission.granted && microphonePermission.granted;
-  };
-
-  const switchFlashMode = () =>
-    setFlashMode(flashMode === "off" ? "on" : "off");
-
-  const switchType = () =>
-    setType(type === CameraType.back ? CameraType.front : CameraType.back);
-
-  const takePicture = async () => {
-    const { uri, width, height } = await cameraRef?.current.takePictureAsync();
-    setPictureUri(uri);
-  };
-
-  if (!getPermissions()) {
-    return Alert.alert(
-      "Permissions Required!",
-      "You need to provide the permissions to access the camera",
-      [{ text: "Got it" }]
+  if (!permission.granted) {
+    // Camera permissions are not granted yet.
+    return (
+      <View style={styles.container}>
+        <Text style={{ textAlign: 'center' }}>We need your permission to show the camera</Text>
+        <Button onPress={requestPermission} title="grant permission" />
+      </View>
     );
+  }
+
+  function toggleCameraFacing() {
+    setFacing(current => (current === 'back' ? 'front' : 'back'));
   }
 
   return (
     <View style={styles.container}>
-      <Camera
-        //ref={cameraRef}
-        style={styles.camera}
-        //type={type}
-        //flashMode={flashMode}
-      >
-        <View style={styles.controlsContainer}>
-          <Feather name="refresh-ccw" size={30} onPress={switchType} />
-          <TouchableOpacity
-            style={styles.takePictureButton}
-            onPress={takePicture}
-          />
-          <Feather
-            name={flashMode === "off" ? "zap-off" : "zap"}
-            size={30}
-            onPress={switchFlashMode}
-          />
+      <CameraView style={styles.camera} facing={facing}>
+        <View style={styles.buttonContainer}>
+          <TouchableOpacity style={styles.button} onPress={toggleCameraFacing}>
+            <Text style={styles.text}>Flip Camera</Text>
+          </TouchableOpacity>
         </View>
-      </Camera>
+      </CameraView>
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent: 'center',
   },
   camera: {
     flex: 1,
   },
-  controlsContainer: {
-    alignItems: "center",
-    backgroundColor: "lightblue",
-    bottom: 0,
-    flexDirection: "row",
-    justifyContent: "space-evenly",
-    left: 0,
-    position: "absolute",
-    right: 0,
+  buttonContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    backgroundColor: 'transparent',
+    margin: 64,
   },
-  takePictureButton: {
-    backgroundColor: "#fff",
-    borderRadius: 35,
-    height: 70,
-    marginVertical: 10,
-    width: 70,
+  button: {
+    flex: 1,
+    alignSelf: 'flex-end',
+    alignItems: 'center',
+  },
+  text: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: 'white',
   },
 });
+
+export default ClassifyScreen;
