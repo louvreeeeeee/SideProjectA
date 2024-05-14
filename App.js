@@ -9,8 +9,6 @@ import GuideBookScreen from './screens/GuideBookScreen'
 
 const Stack = createStackNavigator();
 
-
-
 const App = () => {
   return (
     <NavigationContainer>
