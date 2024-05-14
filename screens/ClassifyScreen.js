@@ -1,10 +1,12 @@
 import { CameraView, useCameraPermissions } from 'expo-camera';
 import { useState } from 'react';
 import { Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import axios from 'axios';
 
 export default function App() {
   const [facing, setFacing] = useState('back');
   const [permission, requestPermission] = useCameraPermissions();
+  const [cameraRef, setCameraRef] = useState(null);
 
   if (!permission) {
     // Camera permissions are still loading.
@@ -21,16 +23,39 @@ export default function App() {
     );
   }
 
-  function toggleCameraFacing() {
-    setFacing(current => (current === 'back' ? 'front' : 'back'));
+  const capture = async () => {
+    if (cameraRef) {
+      const photo = await cameraRef.takePictureAsync();
+      console.log(photo);
+      // Handle the taken photo (e.g., display it, save it to storage, etc.)
+    }
+    await axios({
+        method: "POST",
+        url: "https://detect.roboflow.com/common-rice-pests-philippines/11",
+        params: {
+            api_key: "nckOWyg6wnD7g24gr0Bd",
+            image: "https://modernfarmer.com/wp-content/uploads/2021/12/shutterstock_1673668639.jpg"
+        },
+        // data: image,
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+        }
+    })
+    .then(function(response) {
+        //console.log(response.data);
+        console.log('hello');
+    })
+    .catch(function(error) {
+        console.log(error.message);
+    });
   }
 
   return (
     <View style={styles.container}>
-      <CameraView style={styles.camera} facing={facing}>
+      <CameraView style={styles.camera} facing={facing} ref={(ref) => setCameraRef(ref)}>
         <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.button} onPress={toggleCameraFacing}>
-            <Text style={styles.text}>Flip Camera</Text>
+          <TouchableOpacity style={styles.button} onPress={capture}>
+            <Text style={styles.text}>Detect Pest</Text>
           </TouchableOpacity>
         </View>
       </CameraView>
