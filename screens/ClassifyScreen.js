@@ -42,6 +42,11 @@ const formatClass = (name) => {
 const DetectedModal = ({ visible, data, onClose }) => {
   const uniqueClasses = Array.from(new Set(data.map(item => item.class)));
 
+  const openmodal = (item) => {
+    console.log(item);
+    
+  } 
+
   return (
     <Modal
       visible={visible}
@@ -52,7 +57,7 @@ const DetectedModal = ({ visible, data, onClose }) => {
           <ScrollView contentContainerStyle={styles.modalContentContainer}>
             <Text style={styles.resultTitle}>{uniqueClasses.length} Unique Pest(s) Detected!</Text>
             {uniqueClasses.map((item,ind)=>(
-              <TouchableOpacity key={ind} style={{width:350,backgroundColor:'#225D41',marginVertical:10}}>
+              <TouchableOpacity key={ind} onPress={()=>{openmodal(item)}} style={{width:300,backgroundColor:'#225D41',marginVertical:10}}>
                 {getImageSource(item)}
                 <Text style={{color:'#FFFFFF', textAlign:'center', marginVertical:10}}>{formatClass(item)}</Text>
               </TouchableOpacity>
