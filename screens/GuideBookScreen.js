@@ -34,7 +34,7 @@ const GuidebookScreen = () => {
 
   const getImageSource = (name) => {
     switch (name) {
-      case 'Brown PlantHopper':
+      case 'Brown Planthopper':
         return <Image source={require('../assets/Pests/brown.jpg')} style={styles.image} />;
       case 'Green Leafhopper':
         return <Image source={require('../assets/Pests/green.png')} style={styles.image} />;
@@ -46,8 +46,7 @@ const GuidebookScreen = () => {
         return <Image source={require('../assets/Pests/yellowstemborer.jpg')} style={styles.image} />;
       case 'Whorl Maggot':
         return <Image source={require('../assets/Pests/whorl.jpg')} style={styles.image} />;
-      default:
-        return null;
+      
     }
   };
 
