@@ -14,14 +14,9 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["**/*"],
-    "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.yourcompany.yourapp",
-      "infoPlist": {
-        "NSCameraUsageDescription": "This app needs access to your camera to take photos."
-      }
-    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
@@ -31,10 +26,21 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.lougesite.PestDetection123",
-      "permissions": ["CAMERA"]
+      "permissions": [
+        "CAMERA"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "783d66d8-52bd-4364-b4c2-9ae3f3e2e4e3"
+      }
+    },
+    "plugins": [
+      "expo-font"
+
+    ]
   }
 }
