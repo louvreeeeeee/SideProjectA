@@ -1,9 +1,10 @@
 import React from 'react';
-import { View, Text, Image, TouchableOpacity, StyleSheet, StatusBar } from 'react-native';
+import { View, Text, Image, TouchableOpacity, StyleSheet, StatusBar, Dimensions } from 'react-native';
 //import { TouchableOpacity } from 'react-native-gesture-handler';
 import { Ionicons, MaterialIcons} from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
+const { width: screenWidth, height: screenHeight } = Dimensions.get('window'); // Get screen dimensions
 
 const SecondInstructionScreen = () => {
   const navigation = useNavigation();
@@ -31,8 +32,10 @@ const SecondInstructionScreen = () => {
           style={styles.imageDetected}
           source={require('../assets/images/BPH-nobackground.png')} // Change this to the path of your image
         />
-          <Text style={styles.pestDetected}>Pest Detected!</Text>
-          <Text style={styles.pestName}>Brown Planthopper</Text>
+          <View style={styles.pestInfo}>
+            <Text style={styles.pestDetected}>Pest Detected!</Text>
+            <Text style={styles.pestName}>Brown Planthopper</Text>
+          </View>
         </View>
           <View style={styles.subheader}>
           <Image
@@ -47,7 +50,7 @@ const SecondInstructionScreen = () => {
         <TouchableOpacity onPress={() => navigation.navigate('ThirdInstructionScreen')} style={styles.buttonContainer}>
           <View style={styles.buttonTitle}>
           <Text style={styles.buttonText}>Susunod na Hakbang</Text>
-          <MaterialIcons name="arrow-right-alt" size={30} color = {'white'} bottom = {3}/>
+          <MaterialIcons name="arrow-right-alt" size={30} color = {'white'} />
           </View>
         </TouchableOpacity>
         </View>
@@ -68,62 +71,72 @@ const styles = StyleSheet.create({
   },
   imageContainer: {
     width: '100%', // Occupies the whole width of the screen
-    height: '60%',
+    //height: '55%',
+    height: screenHeight * 0.65,
   },
   image: {   
     width: '100%', // Occupies the whole width of the screen
     height: '100%',
   },
   detectedContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
     marginTop: 12,
     width: '80%',
     borderWidth: 1,
-    borderColor:'#90A895',
+    borderColor: '#90A895',
     backgroundColor: 'white',
     borderRadius: 10,
-    height: 100, 
+    padding: 3,
   },
-  imageDetected: { 
-    bottom: 11,  
-    width: '40%', // Occupies the whole width of the screen
-    height: '120%',
+  imageDetected: {
+    width: 90, // Ensure the detected image has a consistent size
+    height: 65,
+  },
+  pestInfo: {
+    marginLeft: 30, // Separates the image and text
   },
   pestDetected: {
-    bottom: 100,
-    marginLeft: 150,
-    fontSize: 19,
+    //bottom: 100,
+    //marginLeft: 135,
+    fontSize: screenHeight *0.025,
+    //fontSize: 19,
     fontFamily:'Lora_500Medium',
+    color: '#094F29',
   },
   pestName: {
     fontFamily:'Lora_400Regular',
-    bottom: 90,
-    marginLeft: 150,
-    fontSize: 14,
+    //bottom: 90,
+    //marginLeft: 135,
+    //fontSize: 14,
+    fontSize: screenHeight *0.019,
   },
   instructcontainer: {
     position: 'absolute',
     width: '100%',
-    marginTop: '88%',
-    height: 420, 
+    bottom: 0, // Aligns the container at the bottom
+    //height: '49%', // Adjusted height to make room for content
+    height: screenHeight * 0.495,
     backgroundColor: '#FFFFFF',
     alignItems: 'center',
-    justifyContent: 'flex-start', // Changed to flex-start to align items from the top
-    flexDirection: 'column', // Changed to column to align items vertically
+    justifyContent: 'flex-start',
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
-    paddingTop: 20, // Added padding to create space at the top
+    paddingTop: 20,
+    zIndex: 2,
   },
   instructTitle: {
     color: '#094F29',
-    fontSize: 22,
+    fontSize: screenHeight *0.03,
+    //fontSize: 22,
     fontFamily: 'Quattrocento_700Bold',
     
   },
   stepTitle: {
-    marginRight: 100,
-    //width: '65%',
+    marginLeft: 10,
     marginBottom: 8,
-    fontSize: 14,
+    fontSize: screenHeight *0.02,
+    //fontSize: 14,
     fontFamily: 'Lora_500Medium',
     color: '#094F29',
   },
@@ -132,23 +145,28 @@ const styles = StyleSheet.create({
 
     width: '80%',
     textAlign: 'justify',
+    fontSize: screenHeight* 0.017,
     fontSize: 13,
     color: '#094F29',
-    marginBottom: 15,
+    //marginBottom: 20,
   },
   buttonContainer: {
-    height: 50,
-    width: '60%',
+    position: 'absolute',
+    bottom: 15,
+    height: screenHeight * 0.072,
+    width: '65%',
     backgroundColor: '#357B57',
-    paddingVertical: 12,
+    paddingVertical: 10,
     borderRadius: 8,
     alignItems: 'center',
+    justifyContent: 'center',
   },
   buttonTitle: {
 
     width: '75%',
     flexDirection: 'row',
-    alignContent: 'flex-start',
+    alignContent: 'center',
+    justifyContent: 'center',
   },
   buttonText: {
     fontFamily: 'Lora_500Medium',
@@ -171,7 +189,8 @@ const styles = StyleSheet.create({
     position: 'absolute', // Position it absolutely
     top: 15, // Adjust the position as needed
     left: 15, // Adjust the position as needed
-    //zIndex: 1, // Ensure it is above the image
+    zIndex: 1, // Ensure it is above the image
+    padding: 5,
   },
   
 });

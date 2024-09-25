@@ -1,10 +1,13 @@
 import React from 'react';
-import { View, Text, Image, TouchableOpacity, StyleSheet, StatusBar } from 'react-native';
+import { View, Text, Image, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
 //import { TouchableOpacity } from 'react-native-gesture-handler';
 import {  Ionicons, Fontisto } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
+const { width: screenWidth, height: screenHeight } = Dimensions.get('window'); // Get screen dimensions
 
+/*************  ✨ Codeium Command ⭐  *************/
+/******  af9df52d-11f2-4827-be10-6710b77ef648  *******/
 const ThirdInstructionScreen = () => {
   const navigation = useNavigation();
     return (
@@ -34,7 +37,7 @@ const ThirdInstructionScreen = () => {
           </View>
           <Text style={styles.stepDescription}>
           Pagkatapos matukoy ng app ang uri ng peste, makakatanggap ka ng mga rekomendasyon kung paano ito pamahalaan. Sundin ang mga tagubilin ng app para sa epektibong paraan ng pag-aalis ng peste at upang mapanatiling malusog ang iyong mga pananim.        </Text>
-        <TouchableOpacity onPress={() => navigation.navigate('ClassifyScreen')} style={styles.buttonContainer}>
+        <TouchableOpacity onPress={() => navigation.navigate('CameraScreen')} style={styles.buttonContainer}>
           <View style={styles.buttonTitle}>
           
           <Text style={styles.buttonText}>I-test ang App</Text>
@@ -59,7 +62,8 @@ const styles = StyleSheet.create({
   },
   imageContainer: {
     width: '100%', // Occupies the whole width of the screen
-    height: '70%',
+    //height: '70%',
+    height: screenHeight * 0.72,
   },
   image: {
     width: '100%', // Occupies the whole width of the screen
@@ -69,15 +73,17 @@ const styles = StyleSheet.create({
   instructcontainer: {
     position: 'absolute',
     width: '100%',
-    marginTop: '118%',
-    height: 300, 
+    bottom: 0, // Place it at the bottom of the screen
+    height: screenHeight * 0.37,
+    //height: '37%', // Adjust the height as a percentage for responsiveness
     backgroundColor: '#FFFFFF',
     alignItems: 'center',
-    justifyContent: 'flex-start', // Changed to flex-start to align items from the top
-    flexDirection: 'column', // Changed to column to align items vertically
+    justifyContent: 'flex-start',
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
-    paddingTop: 20, // Added padding to create space at the top
+    paddingTop: 20,
+    zIndex: 2,
+   // Added padding to create space at the top
   },
   instructTitle: {
     color: '#094F29',
@@ -88,37 +94,46 @@ const styles = StyleSheet.create({
     marginRight: 100,
     //width: '65%',
     marginBottom: 8,
-    fontSize: 14,
+    fontSize: screenHeight *0.02,
+    //fontSize: 14,
     fontFamily: 'Lora_500Medium',
     color: '#094F29',
   },
   stepDescription: {
+    flex: 1,
     fontFamily: 'Lora_400Regular',
     width: '80%',
     textAlign: 'justify',
-    fontSize: 13,
+    //fontSize: 13,
+    fontSize: screenHeight* 0.017,
     color: '#094F29',
-    marginBottom: 15,
+    //marginBottom: 15,
     
   },
   buttonContainer: {
-    height: 50,
+    position: 'absolute',
+    bottom: 15,
+    //bottom: '9%',
+    //height: 53,
+    height: screenHeight * 0.072,
     width: '50%',
     backgroundColor: '#357B57',
-    paddingVertical: 12,
+    paddingVertical: 10,
     borderRadius: 8,
     alignItems: 'center',
+    justifyContent: 'center',
   },
   buttonTitle: {
     width: '60%',
     flexDirection: 'row',
-    //alignContent: 'flex-start',
+    alignContent: 'center',
+    justifyContent: 'center',
   },
   buttonText: {
     fontFamily: 'Lora_500Medium',
     color: '#FFFFFF',
     fontSize: 16,
-    marginLeft: 5,
+    //marginLeft: 5,
   },
   subheader: {
     marginTop: 10,
@@ -135,7 +150,8 @@ const styles = StyleSheet.create({
     position: 'absolute', // Position it absolutely
     top: 15, // Adjust the position as needed
     left: 15, // Adjust the position as needed
-    //zIndex: 1, // Ensure it is above the image
+    zIndex: 1, // Ensure it is above the image
+    padding: 5,
   },
 });
 

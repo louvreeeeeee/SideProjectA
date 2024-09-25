@@ -3,7 +3,13 @@ import { View, Text, Image, TouchableOpacity, StyleSheet, ScrollView } from 'rea
 import { AntDesign} from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import RecommendationScreen from './RecommendationScreen';
+import { Dimensions } from 'react-native';
 
+const { width: screenWidth , height: screenHeight} = Dimensions.get('window');
+
+
+// Import the logo image
+const logo = require('../assets/questionmark.png');
 const insects = [
   { name: 'Brown Plant Hopper', tagalog: '(Kayumangging ngusong kabayo)', image: require('../assets/images/BPH-nobackground.png'), color: '#357B57', iconColor: 'rgba(255, 255, 255, 1)' , textColor: 'white' },
   { name: 'Rice Bug', tagalog: 'Atangya (Tagalog)', image: require('../assets/images/RBG-Blackricebug.png'), color: '#D8EBE1', iconColor: '#357B57', textColor: '#094F29'  },
@@ -14,35 +20,48 @@ const insects = [
 ];
 
 
-const InsectButton = ({ insect }) => {
+const InsectButton = ({ insect, index }) => {
   const navigation = useNavigation();
 
   const handlePress = () => {
-    console.log(`Selected pest: ${insect.name}`); // Fix string interpolation
+    console.log(`Selected pest: ${insect.name}`);
     navigation.navigate('RecommendationScreen', { insect });
   };
 
   return (
+    
     <TouchableOpacity
-    onPress={handlePress} // Pass the insect data to PestDetails screen // Pass the screen name as a string
+      onPress={handlePress}
       style={[styles.button, { backgroundColor: insect.color }]}
     >
+      
+
       <View style={styles.imageContainer}>
         <Image source={insect.image} style={styles.image} />
-        <AntDesign name="rightcircle" size={29} color={insect.iconColor} style={styles.icon} />
+        <AntDesign
+          name="rightcircle"
+          size={screenWidth * 0.07} // Dynamically adjust the icon size based on screen width
+          color={insect.iconColor}
+          left={screenWidth * 0.74}
+          style={styles.icon}
+        />
       </View>
       <View style={styles.textContainer}>
-        <Text style={[styles.name, {color: insect.textColor}]}>{insect.name} </Text>
-        <Text style={[styles.tagalog, {color: insect.textColor}]}>{insect.tagalog}</Text>
+        <Text style={[styles.name, { color: insect.textColor }]}>{insect.name}</Text>
+        <Text style={[styles.tagalog, { color: insect.textColor }]}>{insect.tagalog}</Text>
       </View>
     </TouchableOpacity>
+    
   );
 };
 
 
 
+
 const Digibook = () => (
   <ScrollView contentContainerStyle={styles.container}>
+    <Image source={logo} style={styles.logo} />
+    <Text style={styles.header}>MGA URI NG PESTE SA PALAY</Text>
     {insects.map((insect, index) => (
       <InsectButton key={index} insect={insect} />
     ))}
@@ -53,6 +72,22 @@ const styles = StyleSheet.create({
   container: {
     paddingVertical: 55,
     alignItems: 'center',
+  },
+  header: {
+    fontFamily: 'Lora_700Bold', 
+    fontSize:16, 
+    color: 'black',
+    right: screenWidth * 0.11,
+    top:`-3%`,
+  },
+  logo: {
+    width: 50,
+    height: 50,
+    position: 'absolute',
+    top: '3.4%',
+    right: '7%',
+    resizeMode: 'contain',
+    
   },
   button: {
     width: '87%',
@@ -73,7 +108,7 @@ const styles = StyleSheet.create({
   image: {
     left: -25,
     top: -80,
-    width: 120,
+    width: 100,
     height: 240,
     resizeMode: 'center',
     position: 'absolute',
@@ -81,9 +116,10 @@ const styles = StyleSheet.create({
   },
   icon: {
     position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: [{ translateX: 235 }, { translateY: -13}], // Center the icon
+    top: '35%',
+    //left: '100%',  // Align relative to the right side of the button
+    //transform: [{ translateX: 216 }, { translateY: -13}], // Center the icon
+   
   },
   textContainer: {
     position: 'relative',

@@ -1,15 +1,15 @@
 {
   "expo": {
-    "name": "PestDetection123",
-    "slug": "PestDetection123",
+    "name": "PestDigibook",
+    "slug": "pest-digibook",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/LOGO.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/LOGO-TRANSPARENT.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#225d41"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -22,7 +22,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/LOGO.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.lougesite.PestDetection123",
@@ -31,16 +31,16 @@
       ]
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/LOGO-TRANSPARENT2.png"
     },
     "extra": {
       "eas": {
-        "projectId": "783d66d8-52bd-4364-b4c2-9ae3f3e2e4e3"
+        "projectId": "24117b2f-9782-4352-9a7a-1c32249fc30e"
       }
     },
     "plugins": [
       "expo-font"
-
-    ]
+    ],
+    "owner": "lougesite"
   }
 }

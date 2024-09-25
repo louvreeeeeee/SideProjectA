@@ -3,7 +3,7 @@ import { ScrollView, View, Text, Image, TouchableOpacity, Modal, StyleSheet } fr
 import { LinearGradient } from 'expo-linear-gradient'; // Import LinearGradient component from Expo
 import pestData from '../pests.json'; // Importing pest data from JSON file
 
-const GuidebookScreen = () => {
+const GuideBookScreen = () => {
   const [selectedPest, setSelectedPest] = useState(null);
   const [modalVisible, setModalVisible] = useState(false);
   const [managementModalVisible, setManagementModalVisible] = useState(false);
@@ -317,4 +317,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default GuidebookScreen;
+export default GuideBookScreen;

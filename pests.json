@@ -2,7 +2,7 @@
     "pests":[
         {
             "name":"Brown Planthopper",
-            "tagalog_name":"kayumangging hanip/ ngusong kabayo",
+            "tagalog_name":"Kayumangging Ngusong Kabayo",
             "identifying_marks":"Adults are 2.5mm-3.0mm long, brown, winged, or without wings. The legs are hairless and the hind leg has a large, mobile outgrowth.",
             "where_to_find":"Rainfed and irrigated wetland fields are preferred. It is rare in upland rice. Directsown fields are more prone to heavy damage than transplanted fields. All plant growth stages can be attacked, but the most susceptible growth stages are from early tillering to flowering. Increasing nitrogen levels, closer plant spacing, and higher relative humidity multiply BPH numbers. ",
             "damage":"Adults and nymphs cause direct damage by sucking the sap at the base of the tillers. Plants turn yellow and dry up rapidly. Heavy infestation creates brown patches of dried plants known as hopperburn. They also transmit virus diseases: ragged stunt, grassy stunt, and wilted stunt. Excreted honeydew on infested plants may also become a medium for sooty mold fungus. ",
@@ -33,7 +33,7 @@
         },
         {
             "name":"Green Leafhopper",
-            "tagalog_name":"berdeng ngusong kabayo",
+            "tagalog_name":"Berdeng Ngusong Kabayo",
             "identifying_marks":"They are slender insects, usually narrowing at the back. They have thin tapering antennae. The hind legs are covered with hairs. Adults are 3.2mm-5.3mm long, opaque green, with black markings on the head, face, wings, and wing tips. ",
             "where_to_find":"Grasses found near irrigation canals and levees, and rice ratoons are favorable for feeding and egg-laying. Tillering and panicle initiation stages are most favorable for their multiplication, although seedling to booting stages are also susceptible. They jump readily when disturbed. They are active in summer and become sluggish during cold weather. Thus, their numbers decline drastically. To quickly detect them, either tap vigorously several plants, stopping now and then as one walks through a field, or sweep rice foliage with an insect net.",
             "damage":"Adults and nymphs cause direct damage to the rice plant by sucking the sap from leaf sheaths and leaf blades. GLH also cause indirect damage by injecting toxic chemicals and transmitting viruses (tungro, dwarf, transitory yellowing, and yelloworange leaf) and a mycoplasma disease (yellow dwarf). They mostly confine themselves and feed on the leaf and leaf sheath of rice. Mild infestations reduce plant vigor and number of productive tillers. Heavy infestations cause withering and complete drying of the crop",
@@ -65,7 +65,7 @@
         },
         {
             "name":"Leaf Folder",
-            "tagalog_name":"mambibilot, maniniklop",
+            "tagalog_name":"Mambibilot, Maniniklop",
             "identifying_marks":"The adults are light brown moths with a wingspan of 12-20mm. A dark terminal band characterizes the outer margins of the wings. Larvae are transparent green and measure up to 2.5 centimeters (cm) in length. Adults are attracted to light at night; at daytime, they are mostly found in shaded or grassy areas.",
             "where_to_find":"Leaffolders live in all environments but are abundant during the rainy season. High humidity, shady areas of the field, and excessive use of nitrogenous fertilizers favor their rapid multiplication.",
             "damage":"Leaffolders inflict damage in the larva stage. Plants are susceptible to attack up to 10 weeks after transplanting (i.e., from seedling to flowering). Infestation usually occurs during early growth stages of the rice crop. The larvae infest the leaves of young plants; they fasten the edges of a leaf together and live inside the rolled leaf. Heavy infestation makes the plant look burnt, sickly, and twig-like. ",
@@ -93,7 +93,7 @@
         },
         {
             "name":"Rice Bug",
-            "tagalog_name":"atangya",
+            "tagalog_name":"Atangya (Tagalog)",
             "identifying_marks":"Young nymphs are green while adults are greenish-brown. The adults are slender and about 15mm long. When the temperature is high and the insects are not feeding, they camouflage themselves on the plant by taking up a particular posture. The first and second instars often raise their abdomen when on the panicle, but when on the leaves, their whole body is straightened. The older nymphs and adults lower their abdomen flat against the panicle or leaf, draw the antennae and front legs together anteriorly against the substrate, and extend the middle and hind pairs of legs against the abdomen. When the plant is disturbed, nymphs drop to the lower parts of the plant while the adults fly a short distance. When handled or threatened, both nymphs and adults secrete an odorous substance that leaves an orange stain on the fingers.",
             "where_to_find":"Bugs are found in all environments but are prevalent in rainfed wetland or upland rice. They are destructive in areas where rainfall is evenly distributed throughout the year, and also in irrigated crops. Extensive weedy areas of rice fields, wild grasses near canals, staggered rice planting, rice fields adjacent to woodlands, and coconut plantations favor bug multiplication. Susceptible growth stages are from flowering to milky stage.",
             "damage":"Adults and nymphs appear in the young crop with the early rains. They suck sap from the developing grains at the milky stage. All soft milky grains are susceptible to attack. Panicles in heavily infested fields remain erect. Insect attack results in discolored or shriveled grains; off-smell of raw and cooked rice, and off-flavor of straws, which is unattractive to cattle. Before grain formation, the bugs feed on succulent shoots and leaves. Nymphs cause more damage than adults.",
@@ -121,7 +121,7 @@
         },
         {
             "name":"Yellow Stem Borer",
-            "tagalog_name":"dilaw na aksip, dilaw na bagumbong",
+            "tagalog_name":"Dilaw na Bagumbong",
             "identifying_marks":"The male and female adults are two different forms, and with distinct sexual characteristics. The female moth has one dark spot at the center of its bright yellowish forewings, while spots on the forewings of the male are not clearly seen. The wingspan is 22mm–30mm. The males are smaller than the females, and do not have yellowish hairs at the end of the abdomen.",
             "where_to_find":"Yellow stem borer is a notorious pest of deepwater rice. It is abundant in aquatic habitats where flooding occurs and where multiple rice crops are grown annually. Rice plants at the vegetative and early heading stages are preferred for egg-laying. Plants receiving high nitrogenous fertilizers are also favorable to larval survival. Only one larva can be found in a stem. To detect the presence of moth, flush the borders of the field. To monitor larval densities, dissect tillers at tiller elongation and panicle initiation stages. For eggmasses, check seedbed or newly established crop at weekly intervals starting 3 weeks after transplanting up to 9 WAT. Egg-laying can peak at 3.5 eggmass/m2 .",
             "damage":"The larvae bore into the rice stems and hollow them out completely. In young plants, the central leaf whorl does not unfold, turns brownish, and dries up, although lower leaves remain green and healthy. Such symptom is referred to as deadheart. In older plants, the panicles dry up with unfilled grains and turn white. Such symptom is referred to as whitehead. Both deadheart and whitehead can easily be pulled out by hand. Older plants often break where the stem was hollowed out causing lodging.",
@@ -153,7 +153,7 @@
         },
         {
             "name":"Whorl Maggot",
-            "tagalog_name":"langaw palay, langaw bukid",
+            "tagalog_name":"Langaw palay",
             "identifying_marks":"Adult flies are dull grey. Females are 1.8mm-2.3mm long. Males are slightly shorter.",
             "where_to_find":"It is a pest of rice seedlings only under irrigated and rainfed conditions. Adults prefer ponds, streams, lakes, and irrigated rice fields for their breeding. This is because the adults locate rice fields by reflected sunlight from the water surface. Hence, direct-seeded fields or seedbeds are not seriously damaged. Rice crop with a mat of azolla on the water surface repels egg-laying of adult flies. In addition, once the plant canopy closes, they can no longer find the rice crop. Rice plants grown under continuous standing water in the first 3-4 weeks after transplanting have more damage than plants in fields where the soil is only saturated. When the young plants are simultaneously stressed with either soil mineral deficiencies or toxicities and other biotic stresses (caseworm or stem borer), the plants damaged by whorl maggots cannot recover; and thus, yield loss will be high.",
             "damage":"The larva that causes damage is called the maggot. It feeds on unopened leaves, nibbling the inner margins. When the leaves emerge from the whorl, damage can be seen as pinhole feeding areas on the leaves, with conspicuous white and yellowish linear patches near the edge of leaves. Severely damaged leaves become distorted and may break from the wind. Infested plants are stunted with few tillers. Susceptible growth stages are seedling to tillering. However, the pest can cause damage to the boot leaf and developing panicles, which can lead to only partial filling of the grains. Crop maturation may be delayed up to 2 weeks; thereby, increasing the risk of crop exposure to typhoons and other stresses. ",

@@ -13,27 +13,33 @@ import FirstInstructionScreen from './screens/FirstInstructionScreen';
 import SecondInstructionScreen from './screens/SecondInstructionScreen';
 import ThirdInstructionScreen from './screens/ThirdInstructionScreen';
 import Digibook from './screens/Digibook';
+import CameraScreen from './screens/CameraScreen';
+
 import RecommendationScreen from './screens/RecommendationScreen';
 import { useFonts } from 'expo-font';
 import React, { useState, useEffect } from 'react';
 import DigibookNavigator from './screens/DigibookNavigator';
-
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import 'react-native-gesture-handler';
+import Onboarding from './screens/Onboarding';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
   return (
+
     <Tab.Navigator
       tabBar={(props) => <Footer {...props} />} // Use Footer as the custom tab bar
       screenOptions={{ headerShown: false }} // Hide headers if not needed
     >
       
       <Tab.Screen name="HomeScreen" component={HomeScreen} />
-      <Tab.Screen name="ClassifyScreen" component={ClassifyScreen} />
+      <Tab.Screen name="CameraScreen" component={CameraScreen} />
       <Tab.Screen name="DigibookNavigator" component={DigibookNavigator} />
       <Tab.Screen name="RecommendationScreen" component={RecommendationScreen} />
     </Tab.Navigator>
+
   );
 };
 
@@ -41,10 +47,11 @@ const App = () => {
   
 
   return (
-    <NavigationContainer>
+<NavigationContainer>
       <Header />
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="SplashScreen" component={SplashScreen} />
+        <Stack.Screen name="Onboarding" component={Onboarding}/>
         <Stack.Screen name="Main" component={TabNavigator} />
         <Stack.Screen name="FirstInstructionScreen" component={FirstInstructionScreen} />
         <Stack.Screen name="SecondInstructionScreen" component={SecondInstructionScreen} />

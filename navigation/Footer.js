@@ -35,7 +35,7 @@ const Footer = () => {
 
 
   // Route names for navigation
-  const routeNames = ['HomeScreen', 'ClassifyScreen', 'DigibookNavigator'];
+  const routeNames = ['HomeScreen', 'CameraScreen', 'DigibookNavigator'];
   
   // Custom display names for the footer
   const displayNames = ['Home', 'Kuhanan', 'DigiBook']; // Custom display names
@@ -81,11 +81,12 @@ const Footer = () => {
 
 const styles = StyleSheet.create({
   container: {
-    
+    borderTopColor: 'white',
+    borderWidth: 0.5,
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
-    backgroundColor: '#225d41',
+    backgroundColor: '#2D6B4A',
     zIndex: 1,
   },
   touchable: {
@@ -93,8 +94,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     width: '20%',
     height: '100%',
+   
   },
   iconContainer: {
+    
+    
     flexDirection: 'column', // Stack icon and text vertically
     justifyContent: 'center', // Center items vertically
     alignItems: 'center', // Center items horizontally
