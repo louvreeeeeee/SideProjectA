@@ -201,7 +201,7 @@ const styles = StyleSheet.create({
     marginBottom: 20, // Space between "How it works?" text and icons
   },
   iconContainer: {
-    marginTop: 9,
+    marginTop: 3,
     flexDirection: 'row',
     justifyContent: 'space-around',
     width: '100%', // Adjust the width as per your requirement
@@ -245,7 +245,7 @@ const styles = StyleSheet.create({
   infoContainer: {
     height: 'auto',  // Make height auto or percentage-based
     padding: 20,
-    flex: 1,
+    //flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',  // Distribute space between elements
@@ -263,7 +263,7 @@ const styles = StyleSheet.create({
     //bottom: 1,
     left: 10,
     //fontSize: 16,
-    fontSize: screenHeight* 0.0232,
+    fontSize: screenHeight* 0.022,
     fontFamily:'Lora_600SemiBold',
     //marginBottom: 10, // Adjust spacing as per your requirement
     color: '#17262A', // Adjust color as per your requirement
@@ -271,8 +271,10 @@ const styles = StyleSheet.create({
   infoText: { 
     fontFamily: 'Lora_400Regular',
     top:1,
+    letterSpacing: 0.4,
     //bottom: 1,
-    marginRight: 5,
+    lineHeight: screenHeight* 0.022,
+    marginRight: 4,
     marginLeft: 10,
     textAlign:'justify',
     fontSize: screenHeight* 0.017,

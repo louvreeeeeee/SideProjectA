@@ -13,133 +13,120 @@ import { useNavigation } from '@react-navigation/native';
 
 const { width: screenWidth , height: screenHeight} = Dimensions.get('window');
 
+/*const PestPrediction = () => {
+  const navigation = useNavigation(); 
+  const [show, setShow] = useState(false);
+  const [data, setData] = useState([]);*/
 
-const getImageSource = (name) => {
-  switch (name) {
-    case 'brown-planthopper':
-      return <Image source={require('../assets/images/BPH-nobackground.png')} style={{ width: screenWidth * 0.13, height: screenHeight * 0.10, right: '10%' }} />;
-    case 'green-leafhopper':
-      return <Image source={require('../assets/images/RBG-GreenPH4.png')} style={{ width: screenWidth * 0.09, height: screenHeight * 0.11, left: '10%' }} />;
-    case 'leaf-folder':
-      return <Image source={require('../assets/images/RBG-Leaffolder.png')} style={{ width: screenWidth * 0.18, height: screenHeight * 0.08, right: '10%' }} />;
-    case 'rice-bug':
-      return <Image source={require('../assets/images/RBG-Blackricebug.png')} style={{ width: screenWidth * 0.11, height: screenHeight * 0.11, right: '10%'}} />;
-    case 'stem-borer':
-      return <Image source={require('../assets/images/RBG-YellowStemBorer.png')} style={{ width: screenWidth * 0.11, height: screenHeight * 0.11, right: '1%' }} />;
-    case 'whorl-maggot':
-      return <Image source={require('../assets/images/RBG-WhorlMaggot.png')} style={{ width: screenWidth * 0.1, height: screenHeight * 0.10, right: '1%' }} />;
-    default:
-      return null;
-  }
-};
-
-
-const formatClass = (name) => {
-  switch (name) {
-    case 'brown-planthopper':
-      return "Brown Planthopper";
-    case 'green-leafhopper':
-      return "Green Leafhopper";
-    case 'leaf-folder':
-      return "Leaf Folder";
-    case 'rice-bug':
-      return "Rice Bug";
-    case 'stem-borer':
-      return "Yellow Stem Borer";
-    case 'whorl-maggot':
-      return "Whorl Maggot";
-    default:
-      return name;
-  }
-};
-
-const DetectedModal = ({ visible, data = [], onClose }) => {
-  const uniqueClasses = Array.from(new Set(data.map(item => item.class)));
-  const [showModal, setShowModal] = useState(false);
-  const [selectedPest, setSelectedPest] = useState(null);
-
-  const openModal = (item) => {
-    setSelectedPest(item);
-    setShowModal(true);
+  const getImageSource = (name) => {
+    switch (name) {
+      case 'brown-planthopper':
+        return <Image source={require('../assets/images/BPH-nobackground.png')} style={{ width: screenWidth * 0.13, height: screenHeight * 0.10, right: '10%' }} />;
+      case 'green-leafhopper':
+        return <Image source={require('../assets/images/RBG-GreenPH4.png')} style={{ width: screenWidth * 0.09, height: screenHeight * 0.11, left: '10%' }} />;
+      case 'leaf-folder':
+        return <Image source={require('../assets/images/RBG-Leaffolder.png')} style={{ width: screenWidth * 0.18, height: screenHeight * 0.08, right: '10%' }} />;
+      case 'rice-bug':
+        return <Image source={require('../assets/images/RBG-Blackricebug.png')} style={{ width: screenWidth * 0.11, height: screenHeight * 0.11, right: '10%' }} />;
+      case 'stem-borer':
+        return <Image source={require('../assets/images/RBG-YellowStemBorer.png')} style={{ width: screenWidth * 0.11, height: screenHeight * 0.11, right: '1%' }} />;
+      case 'whorl-maggot':
+        return <Image source={require('../assets/images/RBG-WhorlMaggot.png')} style={{ width: screenWidth * 0.1, height: screenHeight * 0.10, right: '1%' }} />;
+      default:
+        return null;
+    }
   };
 
-  const closeDetailsModal = () => {
-    setShowModal(false);
-    setSelectedPest(null);
+  const formatClass = (name) => {
+    switch (name) {
+      case 'brown-planthopper':
+        return "Brown Planthopper";
+      case 'green-leafhopper':
+        return "Green Leafhopper";
+      case 'leaf-folder':
+        return "Leaf Folder";
+      case 'rice-bug':
+        return "Rice Bug";
+      case 'stem-borer':
+        return "Yellow Stem Borer";
+      case 'whorl-maggot':
+        return "Whorl Maggot";
+      default:
+        return name;
+    }
   };
 
-  const getPestDetails = (pestName) => {
-    const pest = pestData.pests.find(p => p.name === formatClass(pestName)) || {};
-    return {
-      name: pest.name || '',
-      tagalog_name: pest.tagalog_name || '',
-      identifying_marks: pest.identifying_marks || '',
-      where_to_find: pest.where_to_find || '',
-      damage: pest.damage || '',
-      life_cycle: pest.life_cycle || '',
-      management: pest.management || { Cultural: [], Chemical: [], Biological: [] }
+  const DetectedModal = ({ visible, data = [], onClose }) => {
+    const uniqueClasses = Array.from(new Set(data.map(item => item.class)));
+    const [showModal, setShowModal] = useState(false);
+    const [selectedPest, setSelectedPest] = useState(null);
+    const navigation = useNavigation();
+
+    const openModal = (item) => {
+      setSelectedPest(item);
+      setShowModal(true);
     };
-  };
+  
+    const closeDetailsModal = () => {
+      setShowModal(false);
+      setSelectedPest(null);
+    };
+  
+    const getPestDetails = (pestName) => {
+      const formattedPestName = formatClass(pestName);
+      const pest = pestData.pests.find(p => formatClass(p.name) === formattedPestName) || {};
+      //const pest = pestData.pests.find(p => p.name === formatClass(pestName)) || {};
+      return {
+        name: pest.name || '',
+        tagalog_name: pest.tagalog_name || '',
+        identifying_marks: pest.identifying_marks || '',
+        where_to_find: pest.where_to_find || '',
+        damage: pest.damage || '',
+        life_cycle: pest.life_cycle || '',
+        management: pest.management || { Cultural: [], Chemical: [], Biological: [] }
+      };
+    };
+  
   const handlePredictionPress = (selectedPest) => {
-    const pestDetails = getPestDetails(selectedPest);
-    console.log(`Selected pest: ${selectedPest.name}`);
-    // Navigate to RecommendationScreen and pass the pest details
-    navigation.navigate('RecommendationScreen', { pest: pestDetails });
+    const pestDetails = getPestDetails(formatClass(selectedPest));
+    console.log(`Selected pest: ${formatClass(selectedPest)}`);
+    navigation.navigate('RecommendationScreen', { insect: pestDetails });
   };
-};
-  return (
-    
 
-    <Modal
-      visible={visible}
-      transparent={true}
-      animationType="fade"
-    >
+  return (
+    <Modal visible={visible} transparent={true} animationType="fade">
       <View style={styles.floatingModal}>
         <ScrollView contentContainerStyle={styles.modalContentContainer}>
           <Text style={styles.resultTitle}>{uniqueClasses.length} Unique Pest(s) Detected!</Text>
           {uniqueClasses.map((item, index) => (
-            <TouchableOpacity 
-              key={index} 
+            <TouchableOpacity
+              key={index}
               onPress={() => handlePredictionPress(item)}
-              style={{ 
-                flexGrow: 1,
-                flexDirection: 'row', 
-                alignItems: 'center', 
-                width: '100%', 
-                backgroundColor: 'white', 
-                marginVertical: 8, 
-                paddingHorizontal: 4,
-                //justifyContent: 'space-between',
-                padding: 2, 
-                borderRadius: 10,
-                alignSelf: 'center', 
-                borderColor: 'gray',
-                borderWidth: 0.5,
-                height: screenHeight * 0.087,
-              }}
+              style={[styles.modalDetected]}
             >
-              {getImageSource(item)}
+              {/* Use getImageSource here */}
+              {getImageSource ? getImageSource(item) : null}
               <View style={{ flex: 1 }}>
                 <Text style={{ textAlign: 'center', color: 'black', fontSize: screenHeight * 0.022, fontFamily: 'Lora_500Medium' }}>{formatClass(item)}</Text>
                 <Text style={{ textAlign: 'center', color: 'gray', fontSize: screenHeight * 0.016, fontFamily: 'Lora_500Medium_Italic' }}>{getPestDetails(item).tagalog_name}</Text>
               </View>
-              <Image 
-                source={require('../assets/images/next-page-green.png')} 
-                style={{ width: screenWidth * 0.082, height: screenHeight * 0.04 }} 
+              <Image
+                source={require('../assets/images/next-page-green.png')}
+                style={{ width: screenWidth * 0.082, height: screenHeight * 0.04 }}
               />
             </TouchableOpacity>
           ))}
-          <TouchableOpacity onPress={onClose} style={{  width: 100, padding: 10, alignSelf: 'center', borderRadius: 5, bottom: '-1%', left: '40%' }}>
+          <TouchableOpacity onPress={onClose} style={{ width: 100, padding: 10, alignSelf: 'center', borderRadius: 5, bottom: '-1%', left: '40%' }}>
             <Text style={{ textAlign: 'center', color: '#225D41' }}>CLOSE</Text>
           </TouchableOpacity>
-        </ScrollView>      
+        </ScrollView>
       </View>
     </Modal>
   );
-  const PestPrediction = () => {
-    const navigation = useNavigation(); // Access navigation
-  };
+};
+
+
+
 const LoadingModal = ({ visible }) => {
   return (
     <Modal
@@ -318,7 +305,7 @@ const CameraScreen = () => {
         <Image source={{ uri: imageUri }} style={styles.selectedImage} />
       )}
         <LoadingModal visible={loading} />
-        <DetectedModal visible={show} data={data} onClose={closeModal} />
+        <DetectedModal visible={show} data={data} onClose={closeModal}  />
       </View>
     );
   };
@@ -448,7 +435,22 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  
+  modalDetected: {
+    flexGrow: 1,
+    flexDirection: 'row', 
+    alignItems: 'center', 
+    width: '100%', 
+    backgroundColor: 'white', 
+    marginVertical: 8, 
+    paddingHorizontal: 4,
+    padding: 2, 
+    borderRadius: 10,
+    alignSelf: 'center', 
+    borderColor: 'gray',
+    borderWidth: 0.5,
+    height: screenHeight * 0.087,
+}
+
 });
 
 export default CameraScreen;

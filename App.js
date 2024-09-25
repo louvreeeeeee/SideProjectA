@@ -1,13 +1,12 @@
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import 'react-native-gesture-handler';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Header from './navigation/Header';
 import Footer from './navigation/Footer'; // Custom footer for tabs
 import HomeScreen from './screens/HomeScreen';
 import SplashScreen from './screens/SplashScreen';
-import ClassifyScreen from './screens/ClassifyScreen';
-import GuideBookScreen from './screens/GuideBookScreen';
 import GuidebookSection from './screens/GuideBookSection';
 import FirstInstructionScreen from './screens/FirstInstructionScreen';
 import SecondInstructionScreen from './screens/SecondInstructionScreen';
@@ -16,11 +15,10 @@ import Digibook from './screens/Digibook';
 import CameraScreen from './screens/CameraScreen';
 
 import RecommendationScreen from './screens/RecommendationScreen';
-import { useFonts } from 'expo-font';
 import React, { useState, useEffect } from 'react';
 import DigibookNavigator from './screens/DigibookNavigator';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import 'react-native-gesture-handler';
+
+
 import Onboarding from './screens/Onboarding';
 
 const Stack = createStackNavigator();
@@ -38,6 +36,7 @@ const TabNavigator = () => {
       <Tab.Screen name="CameraScreen" component={CameraScreen} />
       <Tab.Screen name="DigibookNavigator" component={DigibookNavigator} />
       <Tab.Screen name="RecommendationScreen" component={RecommendationScreen} />
+      <Tab.Screen name="Digibook" component={Digibook} />
     </Tab.Navigator>
 
   );
