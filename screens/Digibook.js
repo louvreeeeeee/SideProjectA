@@ -11,7 +11,7 @@ const { width: screenWidth , height: screenHeight} = Dimensions.get('window');
 // Import the logo image
 const logo = require('../assets/questionmark.png');
 const insects = [
-  { name: 'Brown Plant Hopper', tagalog: '(Kayumangging ngusong kabayo)', image: require('../assets/images/BPH-nobackground.png'), color: '#357B57', iconColor: 'rgba(255, 255, 255, 1)' , textColor: 'white' },
+  { name: 'Brown Planthopper', tagalog: '(Kayumangging ngusong kabayo)', image: require('../assets/images/BPH-nobackground.png'), color: '#357B57', iconColor: 'rgba(255, 255, 255, 1)' , textColor: 'white' },
   { name: 'Rice Bug', tagalog: 'Atangya (Tagalog)', image: require('../assets/images/RBG-Blackricebug.png'), color: '#D8EBE1', iconColor: '#357B57', textColor: '#094F29'  },
   { name: 'Green Leafhopper', tagalog: 'Ngusong Kabayo', image: require('../assets/images/RBG-GreenPH3.png'), color: '#357B57', iconColor: 'rgba(255, 255, 255, 1)', textColor: 'white'},
   { name: 'Rice Whorl Maggot', tagalog: 'Langaw palay', image: require('../assets/images/RBG-WhorlMaggot.png'), color: '#D8EBE1', iconColor: '#357B57', textColor: '#094F29' },

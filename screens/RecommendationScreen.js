@@ -10,7 +10,7 @@ const pestsData = require('../assets/pests.json');
 
 // Statically import all images
 const pestImages = {
-  'Brown Plant Hopper': require('../assets/Pests/brown.jpg'),
+  'Brown Planthopper': require('../assets/Pests/brown.jpg'),
   'Rice Bug': require('../assets/Pests/ricebug.jpg'),
   'Green Leafhopper': require('../assets/Pests/green.png'),
   'Rice Whorl Maggot': require('../assets/Pests/whorl.jpg'),

@@ -73,9 +73,9 @@ const { width: screenWidth , height: screenHeight} = Dimensions.get('window');
     };
   
     const getPestDetails = (pestName) => {
-      const formattedPestName = formatClass(pestName);
-      const pest = pestData.pests.find(p => formatClass(p.name) === formattedPestName) || {};
-      //const pest = pestData.pests.find(p => p.name === formatClass(pestName)) || {};
+      //const formattedPestName = formatClass(pestName);
+      //const pest = pestData.pests.find(p => formatClass(p.name) === formattedPestName) || {};
+      const pest = pestData.pests.find(p => p.name === formatClass(pestName)) || {};
       return {
         name: pest.name || '',
         tagalog_name: pest.tagalog_name || '',

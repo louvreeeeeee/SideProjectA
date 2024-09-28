@@ -1,7 +1,7 @@
 {
     "pests":[
         {
-            "name":"Brown Plant Hopper",
+            "name":"Brown Planthopper",
             "tagalog_name":"Kayumangging ngusong kabayo",
             "image":"../assets/Pests/brown.jpg",
             "identifying_marks":"Adults are 2.5mm-3.0mm long, brown, winged, or without wings. The legs are hairless and the hind leg has a large, mobile outgrowth.",
@@ -122,7 +122,7 @@
         },
         {
             "name":"Yellow Stem Borer",
-            "tagalog_name":"dilaw na aksip, dilaw na bagumbong",
+            "tagalog_name":"Dilaw na aksip, dilaw na bagumbong",
             "identifying_marks":"The male and female adults are two different forms, and with distinct sexual characteristics. The female moth has one dark spot at the center of its bright yellowish forewings, while spots on the forewings of the male are not clearly seen. The wingspan is 22mm–30mm. The males are smaller than the females, and do not have yellowish hairs at the end of the abdomen.",
             "where_to_find":"Yellow stem borer is a notorious pest of deepwater rice. It is abundant in aquatic habitats where flooding occurs and where multiple rice crops are grown annually. Rice plants at the vegetative and early heading stages are preferred for egg-laying. Plants receiving high nitrogenous fertilizers are also favorable to larval survival. Only one larva can be found in a stem. To detect the presence of moth, flush the borders of the field. To monitor larval densities, dissect tillers at tiller elongation and panicle initiation stages. For eggmasses, check seedbed or newly established crop at weekly intervals starting 3 weeks after transplanting up to 9 WAT. Egg-laying can peak at 3.5 eggmass/m2 .",
             "damage":"The larvae bore into the rice stems and hollow them out completely. In young plants, the central leaf whorl does not unfold, turns brownish, and dries up, although lower leaves remain green and healthy. Such symptom is referred to as deadheart. In older plants, the panicles dry up with unfilled grains and turn white. Such symptom is referred to as whitehead. Both deadheart and whitehead can easily be pulled out by hand. Older plants often break where the stem was hollowed out causing lodging.",
