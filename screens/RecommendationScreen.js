@@ -98,6 +98,12 @@ function RecommendationScreen() {
           
           <Text style={styles.sectionTitle} marginTop={15}>PINSALA:</Text>
           <Text style={styles.contentText}>{pestData.damage}</Text>
+
+          <Text style={styles.sectionTitle} marginTop={15}>Saan Matatagpuan:</Text>
+          <Text style={styles.contentText}>{pestData.where_to_find}</Text>
+
+          <Text style={styles.sectionTitle} marginTop={15}>Life Cycle:</Text>
+          <Text style={styles.contentText}>{pestData.life_cycle}</Text>
         </View>
       ) : (
         <View style={styles.content}>
@@ -110,7 +116,7 @@ function RecommendationScreen() {
               ))}
             </>
           ) : (
-            <Text style={styles.contentText}>No cultural management available.</Text>
+            <Text style={styles.noContent}>No cultural management available.</Text>
           )}
 
           {pestData.management?.Biological?.length > 0 ? (
@@ -121,7 +127,18 @@ function RecommendationScreen() {
               ))}
             </>
           ) : (
-            <Text style={styles.contentText}>No biological management available.</Text>
+            <Text style={styles.noContent}>No biological management available.</Text>
+          )}
+
+          {pestData.management?.Chemical?.length > 0 ? (
+            <>
+              <Text style={styles.sectionTitle} marginTop={15}>Chemical:</Text>
+              {pestData.management.Chemical.map((item, index) => (
+                <Text key={index} style={styles.contentText}>• {item}</Text>
+              ))}
+            </>
+          ) : (
+            <Text style={styles.noContent}>No Chemical management available.</Text>
           )}
         </View>
       )}
@@ -208,6 +225,13 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#094F29',
     marginBottom: 10,
+  },
+  noContent: {
+    textAlign: 'justify',
+    fontFamily: 'Quattrocento_700Bold',
+    fontSize: 18,
+    color: '#132E20',
+    marginTop: 5,
   },
 });
 

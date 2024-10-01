@@ -35,12 +35,12 @@
     },
     "extra": {
       "eas": {
-        "projectId": "24117b2f-9782-4352-9a7a-1c32249fc30e"
+        "projectId": "f3ccf0ca-a607-4fe7-b82a-0990ecff6f12"
       }
     },
     "plugins": [
       "expo-font"
     ],
-    "owner": "lougesite"
+    "owner": "louvree"
   }
 }

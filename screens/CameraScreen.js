@@ -10,6 +10,8 @@ import { PestDetailsModal, ManagementDetailsModal } from './PestDetailsModal'; /
 import { launchImageLibrary } from 'react-native-image-picker';
 import { Dimensions } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { useFocusEffect } from '@react-navigation/native';
+import { useCallback } from 'react';
 
 const { width: screenWidth , height: screenHeight} = Dimensions.get('window');
 
@@ -172,11 +174,30 @@ const CameraScreen = () => {
     const [zoomLevel, setZoomLevel] = useState(0);
     const [loading, setLoading] = useState(false);
     const [show, setShow] = useState(false);
-    const closeModal = () => { setShow(false); };
+    //const closeModal = () => { setShow(false); };
   
     const [data, setData] = useState([]);
     const [isModalVisible, setIsModalVisible] = useState(false);
-  
+
+    // Updated closeModal function
+    const closeModal = () => {
+      setShow(false); // Close the modal
+      setImageUri(null); // Clear the image URI when modal is closed
+    };
+
+    // Reset state and refocus the camera when the screen is focused
+    useFocusEffect(
+      useCallback(() => {
+        setImageUri(null); // Clear image URI when coming back to camera screen
+        setShow(false); // Close modal if open
+        // Optionally, reset the camera ref or other camera-related states here if needed
+        return () => {
+          // Clean-up function if needed when navigating away from the screen
+        };
+      }, [])
+    );
+
+
     if (!permission) {
       // Camera permissions are still loading.
       return <View />;
@@ -193,66 +214,76 @@ const CameraScreen = () => {
       );
     }
 
-    // Function to launch image picker
+ // Function to handle pest detection
+  const detectPest = async (base64Image) => {
+    setLoading(true);
+    try {
+      const response = await axios({
+        method: "POST",
+        url: "https://detect.roboflow.com/common-rice-pests-philippines/11",
+        params: {
+          api_key: "nckOWyg6wnD7g24gr0Bd",
+        },
+        data: base64Image,
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        }
+      });
+
+      setLoading(false);
+      const detected = response.data.predictions;
+      if (detected.length !== 0) {
+        setData(detected);
+        setShow(true);
+        setImageUri(null);
+      } else {
+        Alert.alert("No pest detected.");
+        setImageUri(null);
+      }
+    } catch (error) {
+      setLoading(false);
+      Alert.alert("Sorry. Please try again.");
+      console.log(error.message);
+    }
+  };
+
+  // Function to launch image picker and detect pest from selected image
   const pickImage = () => {
     const options = {
       title: 'Select Image',
+      mediaType: 'photo',
+    includeBase64: true, // Ensure this is set to include base64 data
       storageOptions: {
         skipBackup: true,
         path: 'images',
       },
     };
 
-    launchImageLibrary(options, (response) => {
-      console.log('Response = ', response);
+    launchImageLibrary(options, async (response) => {
       if (response.didCancel) {
         console.log('User cancelled image picker');
       } else if (response.error) {
         console.log('ImagePicker Error: ', response.error);
       } else if (response.assets) {
         const source = response.assets[0].uri;
-        setImageUri(source); // Set the selected image URI
+        setImageUri(source);
+
+        // Get base64 representation of the selected image
+        const base64Image = `data:image/jpeg;base64,${response.assets[0].base64}`;
+
+        // Call pest detection function
+        await detectPest(base64Image);
       }
     });
   };
-  
-    const capture = async () => {
-      if (cameraRef) {
-        const { base64 } = await cameraRef.takePictureAsync({ base64: true, skipProcessing: true });
-        setLoading(true);
-  
-        await axios({
-          method: "POST",
-          url: "https://detect.roboflow.com/common-rice-pests-philippines/11",
-          params: {
-            api_key: "nckOWyg6wnD7g24gr0Bd",
-          },
-          data: base64,
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
-          }
-        })
-          .then(function (response) {
-            setLoading(false);
-            console.log("Detected:");
-            console.log(response.data.predictions);
-  
-            const detected = response.data.predictions;
-            if (detected.length !== 0) {
-              setData(detected);
-              setShow(true);
-            } else {
-              Alert.alert("No pest detected.");
-            }
-  
-          })
-          .catch(function (error) {
-            setLoading(false);
-            Alert.alert("Sorry. Please try again.");
-            console.log(error.message);
-          });
-      }
-    };
+
+  // Function to capture photo and detect pest from real-time camera
+  const capture = async () => {
+    if (cameraRef) {
+      const { base64 } = await cameraRef.takePictureAsync({ base64: true, skipProcessing: true });
+      await detectPest(base64);
+    }
+  };
   
     const handleZoomLevelChange = (value) => {
         console.log('Zoom level changed:', value);
@@ -426,7 +457,7 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
     position: 'absolute',
     top: '10%',
-    left: '10%', // Use percentages for placement
+    //right: '25%', // Use percentages for placement
   },
   imageButton: {
     position: 'absolute',

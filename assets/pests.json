@@ -4,183 +4,186 @@
             "name":"Brown Planthopper",
             "tagalog_name":"Kayumangging ngusong kabayo",
             "image":"../assets/Pests/brown.jpg",
-            "identifying_marks":"Adults are 2.5mm-3.0mm long, brown, winged, or without wings. The legs are hairless and the hind leg has a large, mobile outgrowth.",
-            "where_to_find":"Rainfed and irrigated wetland fields are preferred. It is rare in upland rice. Directsown fields are more prone to heavy damage than transplanted fields. All plant growth stages can be attacked, but the most susceptible growth stages are from early tillering to flowering. Increasing nitrogen levels, closer plant spacing, and higher relative humidity multiply BPH numbers. ",
-            "damage":"Adults and nymphs cause direct damage by sucking the sap at the base of the tillers. Plants turn yellow and dry up rapidly. Heavy infestation creates brown patches of dried plants known as hopperburn. They also transmit virus diseases: ragged stunt, grassy stunt, and wilted stunt. Excreted honeydew on infested plants may also become a medium for sooty mold fungus. ",
-            "life_cycle":"Eggs are laid in batches inside the leaf sheaths and on the leaf midrib. Nymphs are brown. Nymphs molt five times before turning to adult. Adults with long wings are attracted to light traps.",
-            "management":{
-                "Cultural":[
-                    "Draining the rice field for 3-4 days is recommended during the early stage of infestation.",
-                    "Nitrogen application can be split to reduce Brown plant hopper buildup.",
-                    "Synchronous planting within 3 weeks of staggering and maintaining a free-rice period could also decrease the build-up of Brown plant hopper.",
-                    "There are varieties released by IRRI, which contain genes for Brown plant hopper resistance, like IR26, IR64, IR36, IR56, and IR72.",
-                    "Use resistant varieties like PY 3, CO 42, ADT 35, ADT 37, PTB 33 and PTB 21, Aruna, Kanaka, Karthika, Krishnaveni, Makon, Abhey, Asha, Divya.",
-                    "Avoid close planting and provide 30 cm rogue spacing at every 2.5 to 3.0 m to reduce the pest incidence."
+            "identifying_marks": "Ang mga adulto ay may haba na 2.5mm-3.0mm, kayumanggi, may mga pakpak o walang pakpak. Ang mga binti ay walang buhok at ang likod na binti ay may malaking, madaling gumalaw na paglaki.",
+            "where_to_find": "Mas pinipili ang mga palayan na nababasa sa ulan at patubig. Bihira sa mga upland rice. Ang mga palayan na direct-sown ay mas madaling masira kaysa sa mga palayan na itinanim na. Ang lahat ng yugto ng paglaki ng halaman ay maaaring atakihin, ngunit ang pinaka-madaling tamaan ay mula sa maagang tillering hanggang pamumulaklak. Ang pagtaas ng antas ng nitrogen, mas masikip na pagtatanim, at mas mataas na kahalumigmigan ay nagpaparami ng bilang ng BPH.",
+            "damage": "Ang mga adulto at nymphs ay direktang pumipinsala sa pamamagitan ng pagsipsip ng sap mula sa ilalim ng tillers. Ang mga halaman ay nagiging dilaw at mabilis na natutuyo. Ang matinding infestasyon ay nagdudulot ng kayumangging mga bahagi ng tuyong halaman na kilala bilang hopperburn. Sila rin ay nagdadala ng mga sakit na virus: ragged stunt, grassy stunt, at wilted stunt. Ang excreted honeydew sa mga infested plants ay maaaring maging sanhi ng itim na amag.",
+            "life_cycle": "Ang mga itlog ay inilalagay sa mga pangkat sa loob ng leaf sheaths at sa midrib ng dahon. Ang mga nymphs ay kayumanggi at nag-a-anyong adulto pagkatapos ng limang beses na pagbabalat. Ang mga adulto na may mahabang pakpak ay naaakit sa mga bitag ng ilaw.",
+            "management": {
+                "Cultural": [
+                    "Ang pagpapadaloy ng tubig sa bukid ng palay sa loob ng 3-4 na araw ay inirerekomenda sa maagang yugto ng infestasyon.",
+                    "Ang pag-aaplay ng nitrogen ay maaaring hatiin upang bawasan ang pagdami ng brown planthopper.",
+                    "Ang sabayang pagtatanim sa loob ng 3 linggo at pagpapanatili ng panahon na walang palay ay maaaring mabawasan ang pagdami ng brown planthopper.",
+                    "May mga barayti na nailabas ng IRRI na may genes para sa resistensya sa brown planthopper tulad ng IR26, IR64, IR36, IR56, at IR72.",
+                    "Gumamit ng mga barayti na resistant tulad ng PY 3, CO 42, ADT 35, ADT 37, PTB 33 at PTB 21, Aruna, Kanaka, Karthika, Krishnaveni, Makon, Abhey, Asha, Divya.",
+                    "Iwasan ang masikip na pagtatanim at magbigay ng 30 cm rogue spacing sa bawat 2.5 hanggang 3.0 m upang mabawasan ang pest incidence."
                 ],
-                "Biological":[
-                    "Release of natural enemies like Lycosa pseudoannulata, Cyrtorhinus lividipennis adult (200 – 250 bugs/ha) during the peak incidence of brown plant hopper at 10 days interval.",
-                    "The common parasites of the eggs are the hymenopteran wasps. Eggs are preyed upon by mirid bugs and phytoseiid mites. Both eggs and nymphs are preyed upon by mirid bugs. Nymphs and adults are eaten by general predators, particularly spiders and coccinellid beetles.",
-                    "Hydrophilid and dytiscid beetles, dragonflies, damselflies, and bugs such as nepid, microveliid, and mesoveliid eat adults and nymphs that fall onto the water surface.",
-                    "Fungal pathogens also infect brown plant hoppers"
+                "Biological": [
+                    "Magpakawala ng natural na kalaban tulad ng Lycosa pseudoannulata, Cyrtorhinus lividipennis adulto (200 – 250 bugs/ha) sa panahon ng peak incidence ng brown planthopper tuwing 10 araw.",
+                    "Ang mga karaniwang parasito ng itlog ay ang hymenopteran wasps. Ang mga itlog ay kinakain ng mirid bugs at phytoseiid mites. Parehong itlog at nymphs ay kinakain ng mirid bugs. Ang mga nymphs at adulto ay kinakain ng mga karaniwang predator, lalo na ang mga gagamba at coccinellid beetles.",
+                    "Ang mga hydrophilid at dytiscid beetles, dragonflies, damselflies, at mga bug tulad ng nepid, microveliid, at mesoveliid ay kumakain ng mga adulto at nymphs na bumabagsak sa ibabaw ng tubig.",
+                    "Ang mga fungal pathogens ay nakakahawa rin sa brown planthopper."
                 ],
-                "Chemical":[
-                    "ETL : 2 / tiller when 1 spider / hill is present (or) 1 / tiller when spiders are not present (or) 1 hopper/ tiller in the absence of predatory spider and 2 hoppers /tiller when spider is present at 1/hill.",
-                    "Drain the water before use of insecticides and direct the spray towards the base of the plants.",
-                    "Avoid use of insecticides causing resurgence such as synthetic pyrethroids, methyl parathuion, fenthion and quinalphos.",
-                    "Spray any one of the following: Phosphamidon 40 SL 1000 ml/ha (or) Phosalone 35 EC 1500 ml/ha (or) Carbaryl 10 D 25 kg/ha (or) Methyl demeton 25 EC 1000 ml/ha (or) Acephate 75 SP 625 gm/ha (or) Chlorpyriphos 20 EC 1250 ml/ha Carbofuran 3 G 17.5 kg/ha (or) Dichlorvos 76 WSC 350 ml/ ha.",
-                    "Use of botanical methods : Neem oil 3% 15 lit/ha (or) Iluppai oil 6% 30 lit/ha (or) Neem seed kernel extract 5% 25 kg/ha"
+                "Chemical": [
+                    "ETL: 2 / tiller kapag may 1 gagamba / hill (o) 1 / tiller kapag walang gagamba (o) 1 hopper/tiller kung walang predatory spider at 2 hoppers/tiller kung may gagamba na 1/hill.",
+                    "Palabasin ang tubig bago gamitin ang insecticides at itutok ang pag-spray sa base ng mga halaman.",
+                    "Iwasan ang paggamit ng mga insecticides na nagdudulot ng resurgence tulad ng synthetic pyrethroids, methyl parathion, fenthion at quinalphos.",
+                    "I-spray ang alinman sa mga sumusunod: Phosphamidon 40 SL 1000 ml/ha (o) Phosalone 35 EC 1500 ml/ha (o) Carbaryl 10 D 25 kg/ha (o) Methyl demeton 25 EC 1000 ml/ha (o) Acephate 75 SP 625 gm/ha (o) Chlorpyriphos 20 EC 1250 ml/ha Carbofuran 3 G 17.5 kg/ha (o) Dichlorvos 76 WSC 350 ml/ ha.",
+                    "Gamitin ang botanical methods: Neem oil 3% 15 lit/ha (o) Iluppai oil 6% 30 lit/ha (o) Neem seed kernel extract 5% 25 kg/ha."
                 ]
             }
         },
         {
             "name":"Green Leafhopper",
             "tagalog_name":"berdeng ngusong kabayo",
-            "identifying_marks":"They are slender insects, usually narrowing at the back. They have thin tapering antennae. The hind legs are covered with hairs. Adults are 3.2mm-5.3mm long, opaque green, with black markings on the head, face, wings, and wing tips. ",
-            "where_to_find":"Grasses found near irrigation canals and levees, and rice ratoons are favorable for feeding and egg-laying. Tillering and panicle initiation stages are most favorable for their multiplication, although seedling to booting stages are also susceptible. They jump readily when disturbed. They are active in summer and become sluggish during cold weather. Thus, their numbers decline drastically. To quickly detect them, either tap vigorously several plants, stopping now and then as one walks through a field, or sweep rice foliage with an insect net.",
-            "damage":"Adults and nymphs cause direct damage to the rice plant by sucking the sap from leaf sheaths and leaf blades. GLH also cause indirect damage by injecting toxic chemicals and transmitting viruses (tungro, dwarf, transitory yellowing, and yelloworange leaf) and a mycoplasma disease (yellow dwarf). They mostly confine themselves and feed on the leaf and leaf sheath of rice. Mild infestations reduce plant vigor and number of productive tillers. Heavy infestations cause withering and complete drying of the crop",
-            "life_cycle":"Eggs are laid in small slits made in the soft parts of the leaf sheaths. Newly laid eggs are oblong, bent, pale yellow, and barely visible. The eggs hatch into nymphs in 6-12 days.",
-            "management":{
-                "Cultural":[
-                    "The most effective means of GLH management is to use GLH-resistant and tungro-resistant varieties like IR 50, IR 54, IR 64, CR 1009, PY 3, Co 46 and white ponni.",
-                    "Apply neem cake @ 12.5 kg/20 cent nursery as basal dose.",
-                    "Transplanting older seedlings (>3 weeks) reduces viral disease susceptibility transmitted by leafhoppers.",
-                    "Nitrogen should be applied as needed to avoid contributing to population or hindering plant recovery from plant hopper damage by applying insufficient nitrogen.",
-                    "Good weed control in the field and on the bunds removes the preferred grassy hosts of Green leaf hopper and promotes crop vigor.",
-                    "Crop rotation with a non-rice crop during the dry season decreases alternate hosts for diseases.",
-                    "Upland rice intercropped with soybean reduces the incidence of leafhoppers on rice compared to rice alone"
+            "identifying_marks": "Sila ay mga payat na insekto, kadalasang kumikitid sa likod. Mayroon silang maninipis na antena na tumutulis. Ang mga likurang binti ay natatakpan ng mga buhok. Ang mga adulto ay may haba na 3.2mm-5.3mm, matingkad na berde, na may mga itim na marka sa ulo, mukha, pakpak, at dulo ng mga pakpak.",
+            "where_to_find": "Ang mga damo na matatagpuan malapit sa mga kanal ng irigasyon at mga levees, at mga ratoon ng palay ay paborable para sa pagkain at pag-itlog. Ang mga yugto ng tillering at panicle initiation ang pinaka-paborable para sa kanilang pagdami, bagaman ang mga seedling hanggang booting stages ay madaling tamaan din. Tumatalon sila kapag sila'y naistorbo. Sila ay aktibo tuwing tag-init at nagiging tamad kapag malamig ang panahon. Dahil dito, ang kanilang bilang ay bumababa nang malaki. Para mabilis silang matagpuan, tapikin nang malakas ang ilang mga halaman, huminto paminsan-minsan habang naglalakad sa isang palayan, o gamitin ang insect net para salukin ang mga dahon ng palay.",
+            "damage": "Ang mga adulto at nymphs ay direktang pumipinsala sa halaman ng palay sa pamamagitan ng pagsipsip ng sap mula sa mga leaf sheaths at dahon. Ang GLH ay nagdudulot din ng hindi direktang pinsala sa pamamagitan ng pag-inject ng mga nakakalason na kemikal at pagpapasa ng mga virus (tungro, dwarf, transitory yellowing, at yelloworange leaf) at isang sakit na mycoplasma (yellow dwarf). Kadalasan, sila ay nananatili at nagpapakain sa dahon at leaf sheath ng palay. Ang bahagyang infestasyon ay nagpapababa ng sigla ng halaman at dami ng mga produktibong tillers. Ang malalalang infestasyon ay nagdudulot ng pagkalanta at ganap na pagkatuyo ng ani.",
+            "life_cycle": "Ang mga itlog ay inilalagay sa maliliit na hiwa sa malambot na bahagi ng mga leaf sheaths. Ang mga bagong itlog ay oblong, baluktot, maputlang dilaw, at halos hindi makita. Ang mga itlog ay napipisa bilang mga nymphs sa loob ng 6-12 araw.",
+            "management": {
+                "Cultural": [
+                    "Ang pinaka-epektibong paraan ng pamamahala ng GLH ay ang paggamit ng GLH-resistant at tungro-resistant na mga barayti tulad ng IR 50, IR 54, IR 64, CR 1009, PY 3, Co 46, at white ponni.",
+                    "Maglagay ng neem cake @ 12.5 kg/20 cent nursery bilang basal dose.",
+                    "Ang pag-transplant ng mas matatandang seedlings (>3 linggo) ay nagpapababa ng pagiging sensitibo sa viral na sakit na dala ng leafhoppers.",
+                    "Ang nitrogen ay dapat ilapat ayon sa pangangailangan upang maiwasan ang pagdami ng populasyon o paghadlang sa paggaling ng halaman mula sa pinsala ng plant hopper sa pamamagitan ng paglalagay ng sapat na nitrogen.",
+                    "Ang mahusay na kontrol sa damo sa bukid at sa bunds ay nag-aalis ng mga damong paborito ng Green leaf hopper at pinapalakas ang sigla ng ani.",
+                    "Ang pag-ikot ng ani gamit ang hindi palay sa panahon ng tagtuyot ay nagpapababa ng mga alternatibong host para sa mga sakit.",
+                    "Ang upland rice na intercropped sa soybean ay nagpapababa ng insidente ng leafhoppers sa palay kumpara sa palay lamang."
                 ],
-                "Biological":[
-                    "The major egg parasitoids are: Oligosita yasumatsui (Hymenoptera: Trichogrammatidae); Anagrus spp. (Hymenoptera: Mymaridae); Gonatocerus spp. (Hymenoptera: Mymaridae).",
-                    "The most abundant predator is the green mired bug Cyrtorhinus lividipennis which predate on both eggs and nymphs.",
-                    "Strepsipterans, small wasps, pipunculid flies, and nematodes parasitize both the nymphs and adults.",
-                    "They are also attacked by aquatic veliid bugs, nabid bugs, empid flies, damselflies, dragonflies, and spiders. A fungal pathogen infects both the nymphs and adults of the green leafhopper."
+                "Biological": [
+                    "Ang mga pangunahing parasito ng itlog ay: Oligosita yasumatsui (Hymenoptera: Trichogrammatidae); Anagrus spp. (Hymenoptera: Mymaridae); Gonatocerus spp. (Hymenoptera: Mymaridae).",
+                    "Ang pinakamaraming predator ay ang green mired bug na Cyrtorhinus lividipennis na kumakain ng parehong itlog at nymphs.",
+                    "Ang mga Strepsipterans, maliliit na wasps, pipunculid flies, at mga nematodes ay nagpaparalisa ng parehong nymphs at adulto.",
+                    "Sila rin ay inaatake ng aquatic veliid bugs, nabid bugs, empid flies, damselflies, dragonflies, at mga gagamba. Ang fungal pathogen ay nakakahawa sa parehong nymphs at adulto ng green leafhopper."
                 ],
-                "Chemical":[
-                    "ETL : 60/25 net sweeps (or) 5/hill at vegetative stage (or) 10/hill at flowering (or) 2/hill in tungro endemic area",
-                    "Scout the field for the presence of Tungro and Green leaf hopper. Check 20 hills while walking diagonally across a transplanted field.",
-                    "Spray insecticides twice, 15 and 30 days after transplanting.",
-                    "Spray any one of the following:Fenitrothion 50 EC 80 ml (or) Phosphamidon 40 SL 50 ml (or) Fenthion 100 EC 40 ml (or) Quinalphos 25 EC 80 ml (or) Phosalone 35 EC 120 ml (or)Monocrotophos 36 SL 40 ml.",
-                    "Maintain 2.5 cm of water in the nursery and broadcast anyone of the following in 20 cents Carbofuran 3 G 3.5 kg (or) Phorate 10 G 1.0 kg (or) Quinalphos 5 G 2.0 kg"
+                "Chemical": [
+                    "ETL: 60/25 net sweeps (o) 5/hill sa vegetative stage (o) 10/hill sa flowering (o) 2/hill sa lugar na endemiko sa tungro",
+                    "Siyasatin ang bukid para sa presensya ng Tungro at Green leaf hopper. Suriin ang 20 burol habang naglalakad na pahilis sa palayan na itinanim.",
+                    "Mag-spray ng insecticides dalawang beses, 15 at 30 araw pagkatapos ng pagtatanim.",
+                    "I-spray ang alinman sa mga sumusunod: Fenitrothion 50 EC 80 ml (o) Phosphamidon 40 SL 50 ml (o) Fenthion 100 EC 40 ml (o) Quinalphos 25 EC 80 ml (o) Phosalone 35 EC 120 ml (o) Monocrotophos 36 SL 40 ml.",
+                    "Panatilihin ang 2.5 cm ng tubig sa nursery at i-broadcast ang alinman sa mga sumusunod sa 20 cents: Carbofuran 3 G 3.5 kg (o) Phorate 10 G 1.0 kg (o) Quinalphos 5 G 2.0 kg."
                 ]
             }
         },
         {
             "name":"Leaffolder",
-            "tagalog_name":"mambibilot, maniniklop",
-            "identifying_marks":"The adults are light brown moths with a wingspan of 12-20mm. A dark terminal band characterizes the outer margins of the wings. Larvae are transparent green and measure up to 2.5 centimeters (cm) in length. Adults are attracted to light at night; at daytime, they are mostly found in shaded or grassy areas.",
-            "where_to_find":"Leaffolders live in all environments but are abundant during the rainy season. High humidity, shady areas of the field, and excessive use of nitrogenous fertilizers favor their rapid multiplication.",
-            "damage":"Leaffolders inflict damage in the larva stage. Plants are susceptible to attack up to 10 weeks after transplanting (i.e., from seedling to flowering). Infestation usually occurs during early growth stages of the rice crop. The larvae infest the leaves of young plants; they fasten the edges of a leaf together and live inside the rolled leaf. Heavy infestation makes the plant look burnt, sickly, and twig-like. ",
-            "life_cycle":"The eggs are laid singly or in pairs on the young leaves. They are flat, oval, and whitish yellow. Eggs hatch to larvae in 4-7 days. The transparent green, slender larvae feed inside the folded leaves for 15-25 days before pupation. Adults emerge 6-8 days from pupa. Total life cycle takes 25-52 days. For adult moths, the potential sugar source in the field is the honeydew excreted by planthoppers.",
-            "management":{
-                "Cultural":[
-                    "Clipping tops of bundled seedlings before transplanting removes eggs.",
-                    "Removing weeds prevents leaffolder buildup.",
-                    "Reducing amount of nitrogenous fertilizer and splitting the application make rice plants less favorable for egg-laying and leaffolder attack.",
-                    "Potassium makes cell walls thicker because of greater silica uptake making the plant more tolerant to leaffolders.",
-                    "Higher infestation occurs in shady places.",
-                    "Wider spacing reduces infestation.",
-                    "Early planting enables plants to escape a high degree of defoliation.",
-                    "Most modern rice varieties can compensate for leaffolder defoliation; making insecticides no longer necessary for control.",
-                    "Varieties with narrow leaves are more resistant to leaffolders than varieties with wider leaves."
+            "tagalog_name":"Mambibilot, Maniniklop",
+            "identifying_marks": "Ang mga adulto ay mga matingkad na kayumangging gamu-gamo na may pakpak na 12-20mm ang lapad. Ang madilim na terminal band ay naglalarawan sa panlabas na gilid ng mga pakpak. Ang mga larvae ay malinaw na berde at may sukat na hanggang 2.5 sentimetro (cm) ang haba. Ang mga adulto ay naaakit sa ilaw sa gabi; sa araw, kadalasan silang matatagpuan sa mga malilim o damuhang lugar.",
+            "where_to_find": "Ang mga leaffolders ay matatagpuan sa lahat ng kapaligiran ngunit sagana sa panahon ng tag-ulan. Ang mataas na kahalumigmigan, malilim na lugar ng bukid, at labis na paggamit ng mga nitrogenous fertilizers ay nakakapagpadami ng kanilang populasyon.",
+            "damage": "Ang mga leaffolders ay pumipinsala sa yugto ng larvae. Ang mga halaman ay sensitibo sa atake hanggang 10 linggo matapos ang pagtatanim (i.e., mula sa seedling hanggang pamumulaklak). Karaniwang nagaganap ang infestasyon sa mga maagang yugto ng paglaki ng palay. Ang mga larvae ay sumisira sa mga dahon ng batang halaman; ikinakabit nila ang gilid ng isang dahon at naninirahan sa loob ng pinagsama-samang dahon. Ang matinding infestasyon ay nagiging sanhi ng pagkasunog, pagkakasakit, at tila patpat na anyo ng halaman.",
+            "life_cycle": "Ang mga itlog ay inilalagay ng isa-isa o pares sa mga batang dahon. Ang mga ito ay patag, hugis-itlog, at maputlang dilaw. Ang mga itlog ay napipisa sa larvae sa loob ng 4-7 araw. Ang malinaw na berde, payat na larvae ay kumakain sa loob ng mga pinagsama-samang dahon sa loob ng 15-25 araw bago magpupupa. Ang mga adulto ay lumalabas sa loob ng 6-8 araw mula sa pupa. Ang kabuuang cycle ng buhay ay tumatagal ng 25-52 araw. Para sa mga adulto na gamu-gamo, ang potensyal na mapagkukunan ng asukal sa bukid ay ang honeydew na inilalabas ng mga planthoppers.",
+            "management": {
+                "Cultural": [
+                    "Ang pagpuputol ng mga tuktok ng mga nakabundol na punla bago ang pagtatanim ay nag-aalis ng mga itlog.",
+                    "Ang pagtanggal ng mga damo ay pumipigil sa pagdami ng leaffolder.",
+                    "Ang pagbawas ng dami ng nitrogenous fertilizers at paghahati-hati ng aplikasyon nito ay nagiging mas hindi kaakit-akit sa leaffolders para sa pag-itlog at pag-atake.",
+                    "Ang potasa ay nagpapakapal sa mga pader ng cell dahil sa mas mataas na pagsipsip ng silica, kaya't mas nagiging matibay ang halaman laban sa leaffolders.",
+                    "Mas mataas na infestasyon ang nagaganap sa mga malilim na lugar.",
+                    "Ang mas maluwag na espasyo ay nagpapababa ng infestasyon.",
+                    "Ang maagang pagtatanim ay nagbibigay-daan sa mga halaman na makaiwas sa matinding defoliation.",
+                    "Karamihan sa mga modernong barayti ng palay ay nakabawi mula sa defoliation ng leaffolder, kaya hindi na kinakailangan ang insecticides para sa kontrol.",
+                    "Ang mga barayti na may makikitid na dahon ay mas lumalaban sa leaffolder kaysa sa mga barayti na may malalapad na dahon."
                 ],
-                "Biological":[
-                    "Small wasps and crickets kill leaffolder eggs.",
-                    "Big wasps, damselflies, ants, and carabid (guitar) beetles prey on larvae.",
-                    "During the wet season, frequent moderate rainfall enables pathogens to wipe out the entire larval population. Fungi and nuclear polyhydrosis virus (NPV) kill the larvae.",
-                    "Spiders eat adult leaffolders."
+                "Biological": [
+                    "Ang maliliit na wasps at mga cricket ay pumapatay sa mga itlog ng leaffolder.",
+                    "Ang malalaking wasps, damselflies, langgam, at carabid (guitar) beetles ay kumakain ng larvae.",
+                    "Sa panahon ng tag-ulan, ang madalas na katamtamang pag-ulan ay nagpapahintulot sa mga pathogens na lipulin ang buong populasyon ng larvae. Ang fungi at nuclear polyhydrosis virus (NPV) ay pumapatay sa larvae.",
+                    "Ang mga gagamba ay kumakain ng adultong leaffolder."
                 ],
-                "Chemical":[]
+                "Chemical": []
+
+
             }
         },
         {
             "name":"Rice Bug",
-            "tagalog_name":"atangya",
-            "identifying_marks":"Young nymphs are green while adults are greenish-brown. The adults are slender and about 15mm long. When the temperature is high and the insects are not feeding, they camouflage themselves on the plant by taking up a particular posture. The first and second instars often raise their abdomen when on the panicle, but when on the leaves, their whole body is straightened. The older nymphs and adults lower their abdomen flat against the panicle or leaf, draw the antennae and front legs together anteriorly against the substrate, and extend the middle and hind pairs of legs against the abdomen. When the plant is disturbed, nymphs drop to the lower parts of the plant while the adults fly a short distance. When handled or threatened, both nymphs and adults secrete an odorous substance that leaves an orange stain on the fingers.",
-            "where_to_find":"Bugs are found in all environments but are prevalent in rainfed wetland or upland rice. They are destructive in areas where rainfall is evenly distributed throughout the year, and also in irrigated crops. Extensive weedy areas of rice fields, wild grasses near canals, staggered rice planting, rice fields adjacent to woodlands, and coconut plantations favor bug multiplication. Susceptible growth stages are from flowering to milky stage.",
-            "damage":"Adults and nymphs appear in the young crop with the early rains. They suck sap from the developing grains at the milky stage. All soft milky grains are susceptible to attack. Panicles in heavily infested fields remain erect. Insect attack results in discolored or shriveled grains; off-smell of raw and cooked rice, and off-flavor of straws, which is unattractive to cattle. Before grain formation, the bugs feed on succulent shoots and leaves. Nymphs cause more damage than adults.",
-            "life_cycle":"Eggs are laid in rows on dead or dry parts of the leaves or stem. Occasionally, they are laid on living leaves. They are red and flat. Eggs hatching to nymphs are dependent on high relative humidity. The egg stage lasts for 6-9 days. The nymphs are green. Nymphs turn to adults in 17-27 days after the fifth molt. Adults live up to 65 days under favorable conditions.",
-            "management":{
-                "Cultural":[
-                    "Eliminate grassy weeds from rice fields, levees, and surrounding areas either by cutting or burning to reduce habitats for egg-laying.",
-                    "Avoid staggered planting of fields to break continuous food source.",
-                    "Passing baskets or bags coated on the inside with sticky material could repel/capture bugs.",
-                    "Net and handpick bugs to reduce their numbers.",
-                    "Put attractants such as arasan or anything having bad odor like dead snails or rats. The bugs attracted can be burned or sprayed with chemicals to reduce their numbers.",
-                    "Awned (bearded) varieties are resistant.",
-                    "Varieties with panicles enclosed in the leaf sheath for longer time offer some mechanical resistance to feeding."
+            "tagalog_name":"Atangya",
+            "identifying_marks": "Ang mga batang nymphs ay berde habang ang mga adulto ay berde-kayumanggi. Ang mga adulto ay payat at may sukat na mga 15mm ang haba. Kapag mataas ang temperatura at hindi kumakain ang mga insekto, sila ay nagkakaroon ng kakayahang magkamuflaj sa halaman sa pamamagitan ng isang partikular na posisyon. Ang unang at ikalawang instars ay madalas na itataas ang kanilang tiyan kapag nasa panicle, ngunit kapag nasa dahon, ang buong katawan nila ay diretso. Ang mas matatandang nymphs at adulto ay ibinababa ang kanilang tiyan na nakapatag sa panicle o dahon, pinagsasama ang antennae at mga unahang binti papunta sa harap laban sa substrate, at ini-extend ang gitna at likurang pares ng binti laban sa tiyan. Kapag ang halaman ay naistorbo, ang mga nymphs ay nahuhulog sa mas mababang bahagi ng halaman habang ang mga adulto ay lumilipad ng maikling distansya. Kapag hinawakan o binantaang pagmasdan, parehong nymphs at adulto ay naglalabas ng amoy na nag-iiwan ng kahel na mantsa sa mga daliri.",
+            "where_to_find": "Ang mga bugs ay matatagpuan sa lahat ng kapaligiran ngunit laganap sa mga palayan na dinidiligan ng ulan o sa upland rice. Sila ay mapanira sa mga lugar na may pantay na distribusyon ng ulan sa buong taon, at gayundin sa mga irrigated na taniman. Ang malalaking damuhang lugar sa mga palayan, ligaw na damo malapit sa mga kanal, staggered rice planting, mga palayan malapit sa kagubatan, at mga plantasyon ng niyog ay pabor sa pagpaparami ng mga bug. Ang mga yugto ng paglaki na madaling maapektuhan ay mula sa pamumulaklak hanggang sa yugto ng milky grains.",
+            "damage": "Ang mga adulto at nymphs ay lumilitaw sa batang pananim kasabay ng unang ulan. Sinasipsip nila ang katas mula sa umuunlad na butil sa yugto ng milky stage. Ang lahat ng malambot na milky grains ay madaling atakihin. Ang mga panicles sa matinding infested na mga bukid ay nananatiling tuwid. Ang atake ng insekto ay nagdudulot ng pagkawalan ng kulay o pagkukulubot ng mga butil; off-smell ng hilaw at lutong palay, at masamang lasa ng mga dayami, na hindi kaakit-akit sa mga baka. Bago pa man magform ang butil, ang mga bug ay nagpapakain sa masustansyang mga usbong at dahon. Ang mga nymphs ay nagdudulot ng mas maraming pinsala kaysa sa mga adulto.",
+            "life_cycle": "Ang mga itlog ay inilalagay sa mga hilera sa patay o tuyong bahagi ng mga dahon o tangkay. Paminsan-minsan, inilalagay ang mga ito sa buhay na mga dahon. Ang mga itlog ay pula at patag. Ang pagkakaroon ng mataas na kahalumigmigan ang kinakailangan upang mapisa ang mga itlog sa nymphs. Ang yugto ng itlog ay tumatagal ng 6-9 na araw. Ang mga nymphs ay berde. Ang mga nymphs ay nagiging adulto sa loob ng 17-27 araw matapos ang ikalimang pagbabalat. Ang mga adulto ay nabubuhay hanggang 65 araw sa mga kanais-nais na kondisyon.",
+            "management": {
+                "Cultural": [
+                    "Tanggalin ang mga damo sa palayan, levees, at mga kalapit na lugar alinman sa pamamagitan ng pagputol o pagsunog upang mabawasan ang mga lugar para sa pag-itlog.",
+                    "Iwasan ang staggered planting upang putulin ang tuloy-tuloy na pinagmumulan ng pagkain.",
+                    "Ang paggamit ng mga basket o bag na may malagkit na materyal sa loob ay maaaring makapagtaboy/makahuli ng mga bug.",
+                    "Gumamit ng lambat at kamay upang pumitas ng mga bug para mabawasan ang kanilang bilang.",
+                    "Maglagay ng mga pang-akit tulad ng arasan o kahit anong mabaho tulad ng patay na suso o daga. Ang mga bug na naaakit ay maaaring sunugin o ispreyan ng mga kemikal upang mabawasan ang kanilang bilang.",
+                    "Ang mga barayti na may balbas (awned) ay resistant.",
+                    "Ang mga barayti na may panicles na mas matagal na naka-enclose sa leaf sheath ay nagbibigay ng mekanikal na resistensya sa pagkain."
                 ],
-                "Biological":[
-                    "Small wasps and long-horned grasshoppers kill eggs.",
-                    "Fungal pathogens infect nymphs and adults.",
-                    "Spiders, crickets, lady beetles, and long-horned grasshoppers feed on nymphs and adults."
+                "Biological": [
+                    "Ang maliliit na wasps at long-horned grasshoppers ay pumapatay ng mga itlog.",
+                    "Ang mga fungal pathogens ay kumakahawa sa nymphs at adulto.",
+                    "Ang mga gagamba, crickets, lady beetles, at long-horned grasshoppers ay kumakain ng nymphs at adulto."
                 ],
-                "Chemical":[
-                    "Foliar sprays or dust formulations are effective. Spray or dust at flowering stage in the early morning or evening on calm days.",
-                    "Granular insecticides are ineffective."
+                "Chemical": [
+                    "Ang mga foliar sprays o dust formulations ay epektibo. I-spray o i-dust sa yugto ng pamumulaklak sa umaga o gabi sa mga kalmadong araw.",
+                    "Ang mga granular insecticides ay hindi epektibo."
                 ]
             }
+
         },
         {
             "name":"Yellow Stem Borer",
             "tagalog_name":"Dilaw na aksip, dilaw na bagumbong",
-            "identifying_marks":"The male and female adults are two different forms, and with distinct sexual characteristics. The female moth has one dark spot at the center of its bright yellowish forewings, while spots on the forewings of the male are not clearly seen. The wingspan is 22mm–30mm. The males are smaller than the females, and do not have yellowish hairs at the end of the abdomen.",
-            "where_to_find":"Yellow stem borer is a notorious pest of deepwater rice. It is abundant in aquatic habitats where flooding occurs and where multiple rice crops are grown annually. Rice plants at the vegetative and early heading stages are preferred for egg-laying. Plants receiving high nitrogenous fertilizers are also favorable to larval survival. Only one larva can be found in a stem. To detect the presence of moth, flush the borders of the field. To monitor larval densities, dissect tillers at tiller elongation and panicle initiation stages. For eggmasses, check seedbed or newly established crop at weekly intervals starting 3 weeks after transplanting up to 9 WAT. Egg-laying can peak at 3.5 eggmass/m2 .",
-            "damage":"The larvae bore into the rice stems and hollow them out completely. In young plants, the central leaf whorl does not unfold, turns brownish, and dries up, although lower leaves remain green and healthy. Such symptom is referred to as deadheart. In older plants, the panicles dry up with unfilled grains and turn white. Such symptom is referred to as whitehead. Both deadheart and whitehead can easily be pulled out by hand. Older plants often break where the stem was hollowed out causing lodging.",
-            "life_cycle":"The larvae bore into the rice stems and hollow them out completely. In young plants, the central leaf whorl does not unfold, turns brownish, and dries up, although lower leaves remain green and healthy. Such symptom is referred to as deadheart. In older plants, the panicles dry up with unfilled grains and turn white. Such symptom is referred to as whitehead. Both deadheart and whitehead can easily be pulled out by hand. Older plants often break where the stem was hollowed out causing lodging.",
-            "management":{
-                "Cultural":[
-                    "Field should be necessarily be scouted during the vulnerable crop growth stages for early detection of dead hearts and white ear.",
-                    "Removal and proper disposal of stubbles will keep the borer population low in next crop.",
-                    "Grow resistant varieties like Ratna, TKM 6, IR 20 , IR 40, IR 56, ADT 47, ADT 48, ASD 20, IR 36, ADT 44, PY 4, ADT 46, Madhu, Kanchana, Swarnapraba, karthika, Deepthi and Tellahamsa.",
-                    "Clip the tip of the seedlings before transplanting to eliminate egg masses.",
-                    "Collect and destroy the egg masses.",
-                    "Avoid close planting and continuous water stagnation at early stages.",
-                    "Pull out and destroy the affected tillers.",
-                    "Harvest the crop up to the ground level and disturb the stubbles with plough immediately after the harvest to keep the borer population low in next crop."
+            "identifying_marks": "Ang mga lalaking at babaeng adulto ay may dalawang magkaibang anyo, at may natatanging mga katangiang sekswal. Ang babaeng gamu-gamo ay may isang madilim na tuldok sa gitna ng kanyang maliwanag na dilaw na pakpak sa harapan, habang ang mga tuldok sa pakpak ng lalaki ay hindi malinaw na nakikita. Ang lapad ng mga pakpak ay 22mm–30mm. Ang mga lalaki ay mas maliit kaysa sa mga babae, at walang dilaw na buhok sa dulo ng tiyan.",
+            "where_to_find": "Ang yellow stem borer ay isang kilalang peste ng malalim na palayan. Ito ay masagana sa mga aquatic habitats kung saan nagaganap ang pagbaha at kung saan maraming palay ang tinatanim taon-taon. Ang mga halaman ng palay sa vegetative at maagang heading stages ay pinipili para sa pag-itlog. Ang mga halaman na tumatanggap ng mataas na antas ng nitrogenous fertilizers ay paborable rin para sa kaligtasan ng larvae. Isa lamang larvae ang maaaring matagpuan sa isang tangkay. Para matukoy ang presensya ng gamu-gamo, pabanlawan ang mga hangganan ng bukid. Para masubaybayan ang densidad ng larvae, dissect ang mga tillers sa yugto ng tiller elongation at panicle initiation. Para sa eggmasses, suriin ang seedbed o bagong tanim na ani sa lingguhang agwat simula sa 3 linggo pagkatapos ng pagtatanim hanggang sa 9 WAT. Ang pag-itlog ay maaaring umabot ng 3.5 eggmass/m2.",
+            "damage": "Ang larvae ay nagbubutas sa loob ng mga tangkay ng palay at hinuhollow ang mga ito nang lubos. Sa mga batang halaman, ang gitnang dahon na whorl ay hindi bumubukas, nagiging kayumanggi, at natutuyo, kahit na ang mas mababang mga dahon ay nananatiling berde at malusog. Ang ganitong sintomas ay tinatawag na deadheart. Sa mga mas matatandang halaman, ang mga panicles ay natutuyo na may mga hindi napunong butil at nagiging puti. Ang ganitong sintomas ay tinatawag na whitehead. Parehong deadheart at whitehead ay madaling mabunot sa pamamagitan ng kamay. Ang mas matatandang halaman ay madalas na nababali kung saan ang tangkay ay hinollow out, na nagiging sanhi ng pagkahulog.",
+            "life_cycle": "Ang larvae ay nagbubutas sa loob ng mga tangkay ng palay at hinuhollow ang mga ito nang lubos. Sa mga batang halaman, ang gitnang dahon na whorl ay hindi bumubukas, nagiging kayumanggi, at natutuyo, kahit na ang mas mababang mga dahon ay nananatiling berde at malusog. Ang ganitong sintomas ay tinatawag na deadheart. Sa mga mas matatandang halaman, ang mga panicles ay natutuyo na may mga hindi napunong butil at nagiging puti. Ang ganitong sintomas ay tinatawag na whitehead. Parehong deadheart at whitehead ay madaling mabunot sa pamamagitan ng kamay. Ang mas matatandang halaman ay madalas na nababali kung saan ang tangkay ay hinollow out, na nagiging sanhi ng pagkahulog.",
+            "management": {
+                "Cultural": [
+                    "Ang bukid ay kailangang inspeksyunin sa mga maselan na yugto ng paglaki ng ani para sa maagang pagtukoy ng deadheart at white ear.",
+                    "Ang pag-alis at tamang pagtatapon ng mga stubbles ay nagpapanatili ng mababang populasyon ng borer sa susunod na ani.",
+                    "Magpatubo ng mga resistant na barayti tulad ng Ratna, TKM 6, IR 20, IR 40, IR 56, ADT 47, ADT 48, ASD 20, IR 36, ADT 44, PY 4, ADT 46, Madhu, Kanchana, Swarnapraba, karthika, Deepthi, at Tellahamsa.",
+                    "Putulin ang dulo ng mga punla bago itanim upang alisin ang mga egg masses.",
+                    "Tipunin at sirain ang mga egg masses.",
+                    "Iwasan ang masikip na pagtatanim at tuloy-tuloy na pag-ipon ng tubig sa mga unang yugto.",
+                    "Bunutin at sirain ang mga apektadong tillers.",
+                    "Anihin ang ani hanggang sa lupa at guluhin ang mga stubbles gamit ang araro kaagad pagkatapos ng anihan upang mapanatiling mababa ang populasyon ng borer sa susunod na ani."
                 ],
-                "Biological":[
-                    "Release of egg parasitoid Trichogramma japonicum thrice at weekly interval starting 28 days after transplanting @ 5 cc (1 lakh egg parasitoids)/ha/release. followed by the release of Trichogramma japonicum at 35 and 42 DAT.",
-                    "Apply Bacillus thuringiensis var kurstaki at 2.5 kg/ha to reduce the oviposition by the stem borer.",
-                    "Release the egg cards in field during morning hours. Tie the egg cards under the leaf surface facing outside.",
-                    "Avoid spraying of chemicals on three days before and upto to seven days after field release of egg cards."
+                "Biological": [
+                    "Magpakawala ng egg parasitoid na Trichogramma japonicum tatlong beses na may lingguhang pagitan simula 28 araw pagkatapos ng pagtatanim @ 5 cc (1 lakh egg parasitoids)/ha/release. Kasunod ng pagpapakawala ng Trichogramma japonicum sa 35 at 42 DAT.",
+                    "Mag-apply ng Bacillus thuringiensis var kurstaki sa 2.5 kg/ha upang mabawasan ang pag-itlog ng stem borer.",
+                    "Ipakawala ang mga egg cards sa bukid sa umaga. Itali ang mga egg cards sa ilalim ng dahon na nakaharap palabas.",
+                    "Iwasan ang pag-spray ng mga kemikal tatlong araw bago at hanggang pitong araw pagkatapos ng pagpapakawala ng egg cards sa bukid."
                 ],
-                "Chemical":[
-                    "ETL : 2 egg masses/m2 (or) 10% dead heart at vegetative stage (or) 2% White ear at Flowering stage.",
-                    "When natural enemies of stem borers are present, application of chemical measures can be delayed or dispensed with.",
-                    "The newly hatched borer larvae must be flit with 2 rounds of quinalphos or phosphomidon at 1000ml/ha at 7 days interval.",
-                    "Spray any one of the following based on ETLs : Quinalphos 25 EC 1000 ml/ha (or) Phosphamidon 40 SL 600 ml/ha (or) Profenophos 50 EC 1000 ml/ha."
+                "Chemical": [
+                    "ETL: 2 egg masses/m2 (o) 10% dead heart sa vegetative stage (o) 2% White ear sa yugto ng pamumulaklak.",
+                    "Kapag ang mga natural na kaaway ng stem borers ay naroroon, maaaring ipagpaliban o itigil ang pag-aaplay ng mga kemikal.",
+                    "Ang mga bagong labas na borer larvae ay dapat ispray ng 2 round ng quinalphos o phosphomidon sa 1000ml/ha sa loob ng 7 araw na pagitan.",
+                    "I-spray ang alinman sa mga sumusunod base sa ETLs: Quinalphos 25 EC 1000 ml/ha (o) Phosphamidon 40 SL 600 ml/ha (o) Profenophos 50 EC 1000 ml/ha."
                 ]
             }
         },
         {
             "name":"Rice Whorl Maggot",
-            "tagalog_name":"langaw palay, langaw bukid",
-            "identifying_marks":"Adult flies are dull grey. Females are 1.8mm-2.3mm long. Males are slightly shorter.",
-            "where_to_find":"It is a pest of rice seedlings only under irrigated and rainfed conditions. Adults prefer ponds, streams, lakes, and irrigated rice fields for their breeding. This is because the adults locate rice fields by reflected sunlight from the water surface. Hence, direct-seeded fields or seedbeds are not seriously damaged. Rice crop with a mat of azolla on the water surface repels egg-laying of adult flies. In addition, once the plant canopy closes, they can no longer find the rice crop. Rice plants grown under continuous standing water in the first 3-4 weeks after transplanting have more damage than plants in fields where the soil is only saturated. When the young plants are simultaneously stressed with either soil mineral deficiencies or toxicities and other biotic stresses (caseworm or stem borer), the plants damaged by whorl maggots cannot recover; and thus, yield loss will be high.",
-            "damage":"The larva that causes damage is called the maggot. It feeds on unopened leaves, nibbling the inner margins. When the leaves emerge from the whorl, damage can be seen as pinhole feeding areas on the leaves, with conspicuous white and yellowish linear patches near the edge of leaves. Severely damaged leaves become distorted and may break from the wind. Infested plants are stunted with few tillers. Susceptible growth stages are seedling to tillering. However, the pest can cause damage to the boot leaf and developing panicles, which can lead to only partial filling of the grains. Crop maturation may be delayed up to 2 weeks; thereby, increasing the risk of crop exposure to typhoons and other stresses. ",
-            "life_cycle":"The white elongated, cigarshaped eggs are laid singly on either surface of the leaves. Eggs hatch into maggots after 2-6 days. The maggot is transparent to light cream and moves down the leaf into the whorl on a film of water or dew, and feed within the developing leaf whorl. Larval period is 8-17 days. Maggots pupate between leaf sheaths. Pupal period is 5-9 days. There are overlapping generations under field conditions. ",
-            "management":{
-                "Cultural":[
-                    "Densely planted seedbeds do not attract adult flies.",
-                    "Transplanting older seedlings (25-30 days) avoids damage.",
-                    "Draining the field at 3-4 day intervals during the first 30 days after transplanting reduces egg-laying.",
-                    "Adults are not attracted to light traps, and they feed on decaying matter.",
-                    "Direct seeding discourages maggot buildup because the plant covers the water surface more rapidly.",
-                    "Dense planting decreases egg-laying.",
-                    "Plants that cover the water surface such as azolla help prevent infestation.",
-                    "More potassium increases plant tolerance to maggots, as cell walls get thicker because of greater silica uptake.",
-                    "Adult flies are strongly attracted to fishmeal baits.",
-                    "High-tillering varieties are more tolerant than low-tillering varieties."
+            "tagalog_name":"Langaw palay, Langaw bukid",
+            "identifying_marks": "Ang mga adultong langaw ay mapusyaw na kulay abong. Ang mga babae ay may sukat na 1.8mm-2.3mm ang haba. Ang mga lalaki ay bahagyang mas maikli.",
+            "where_to_find": "Ito ay isang peste ng mga punla ng palay lamang sa ilalim ng patubig at sa mga kondisyon ng ulan. Ang mga adulto ay mas gusto ang mga lawa, batis, ilog, at mga palayan na irigado para sa kanilang pag-aanak. Ito ay dahil natutukoy ng mga adulto ang mga palayan sa pamamagitan ng nasasalamin na sikat ng araw mula sa ibabaw ng tubig. Kaya't ang mga bukid na direct-seeded o seedbeds ay hindi seryosong nasisira. Ang mga tanim na palay na may banig ng azolla sa ibabaw ng tubig ay pumipigil sa pag-itlog ng mga adultong langaw. Bukod dito, kapag nagsara na ang canopy ng halaman, hindi na nila matatagpuan ang palay. Ang mga palay na lumago sa patuloy na nakatindig na tubig sa loob ng unang 3-4 na linggo pagkatapos ng pagtatanim ay mas nasisira kaysa sa mga tanim na nasa bukid kung saan ang lupa ay bahagyang nabasa lamang. Kapag ang mga batang halaman ay sabay na na-stress ng alinman sa mga kakulangan sa mineral ng lupa o mga toxicities at iba pang mga biotic stresses (caseworm o stem borer), ang mga halaman na nasira ng whorl maggots ay hindi na makakabawi; at samakatuwid, ang pagkalugi sa ani ay magiging mataas.",
+            "damage": "Ang larvae na nagdudulot ng pinsala ay tinatawag na maggot. Ito ay kumakain ng mga hindi pa nabubuksang dahon, kinakagat ang mga panloob na gilid. Kapag lumabas na ang mga dahon mula sa whorl, makikita ang pinsala bilang mga maliit na butas sa dahon, na may kitang-kitang puti at madilaw-dilaw na linya malapit sa gilid ng mga dahon. Ang mga dahong malubhang nasira ay nagiging deformed at maaaring mabali dahil sa hangin. Ang mga infested na halaman ay mababa ang paglaki na may kaunting mga tillers. Ang mga yugto ng paglaki na madaling tamaan ay mula sa seedling hanggang sa tillering. Gayunpaman, ang peste ay maaaring magdulot ng pinsala sa boot leaf at mga umuunlad na panicles, na maaaring magresulta sa hindi ganap na pagpuno ng mga butil. Ang paghinog ng ani ay maaaring maantala ng hanggang 2 linggo; kaya't tumataas ang panganib ng pagkakalantad ng ani sa mga bagyo at iba pang mga stresses.",
+            "life_cycle": "Ang mga puting pahabang itlog na hugis-sigarilyo ay inilalagay ng paisa-isa sa magkabilang ibabaw ng mga dahon. Ang mga itlog ay napipisa sa maggots pagkatapos ng 2-6 na araw. Ang maggot ay malinaw na kulay-krema at bumababa sa dahon papunta sa whorl sa isang manipis na pelikula ng tubig o hamog, at kumakain sa loob ng umuunlad na leaf whorl. Ang yugto ng larvae ay tumatagal ng 8-17 araw. Ang mga maggots ay nagiging pupa sa pagitan ng mga leaf sheaths. Ang yugto ng pupa ay tumatagal ng 5-9 na araw. Mayroong magkakasabay na henerasyon sa ilalim ng mga kondisyon sa bukid.",
+            "management": {
+                "Cultural": [
+                    "Ang mas makapal na pagtatanim ng mga punlaan ay hindi nakakaakit ng mga adultong langaw.",
+                    "Ang pagtatanim ng mas matatandang punla (25-30 araw) ay pumipigil sa pinsala.",
+                    "Ang pagpapakawala ng tubig sa bukid sa pagitan ng 3-4 na araw sa unang 30 araw pagkatapos ng pagtatanim ay nagpapababa ng pag-itlog.",
+                    "Ang mga adulto ay hindi naaakit sa mga light traps, at kumakain sila ng mga nabubulok na bagay.",
+                    "Ang direktang pagtatanim ay pinipigilan ang pagdami ng maggot dahil mas mabilis natatakpan ng halaman ang ibabaw ng tubig.",
+                    "Ang mas makapal na pagtatanim ay nagpapababa ng pag-itlog.",
+                    "Ang mga halaman na natatakpan ang ibabaw ng tubig tulad ng azolla ay nakakatulong na maiwasan ang infestasyon.",
+                    "Ang mas maraming potasa ay nagpapataas ng pagtitiis ng halaman sa maggots, dahil ang mga pader ng cell ay kumakapal dahil sa mas mataas na pagsipsip ng silica.",
+                    "Ang mga adultong langaw ay malakas na naaakit sa mga pain na gawa sa fishmeal.",
+                    "Ang mga barayti na may mataas na tillering ay mas matitiis kaysa sa mga barayti na mababa ang tillering."
                 ],
-                "Biological":[
-                    "Small wasps and field crickets kill eggs.",
-                    "Big wasps kill maggots.",
-                    "Water-borne and aerial-borne spiders eat adults."
+                "Biological": [
+                    "Ang maliliit na wasps at mga field crickets ay pumapatay ng mga itlog.",
+                    "Ang malalaking wasps ay pumapatay ng mga maggots.",
+                    "Ang mga gagamba na mula sa tubig at sa hangin ay kumakain ng mga adulto."
                 ],
-                "Chemical":[
-                    "Maggot control in seedbed is less expensive. Treat seedlings by soaking them overnight in a slurry of systemic insecticide and zinc oxide (ZnO2) powder solution before transplanting.",
-                    "Broadcast granules or mix systemic granules during the last harrowing before transplanting.",
-                    "Foliar sprays are effective only at 1-2 weeks after transplanting (WAT)."
+                "Chemical": [
+                    "Ang kontrol sa maggot sa punlaan ay mas mura. I-treat ang mga punla sa pamamagitan ng pagbabad ng magdamag sa isang slurry ng systemic insecticide at zinc oxide (ZnO2) powder solution bago itanim.",
+                    "I-broadcast ang mga granules o haluin ang mga systemic granules sa huling pag-aararo bago itanim.",
+                    "Ang foliar sprays ay epektibo lamang sa 1-2 linggo pagkatapos ng pagtatanim (WAT)."
                 ]
             }
         }
