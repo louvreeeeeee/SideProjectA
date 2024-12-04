@@ -67,7 +67,7 @@
         {
             "name":"Leaffolder",
             "tagalog_name":"Mambibilot, Maniniklop",
-            "identifying_marks": "Ang mga adulto ay mga matingkad na kayumangging gamu-gamo na may pakpak na 12-20mm ang lapad. Ang madilim na terminal band ay naglalarawan sa panlabas na gilid ng mga pakpak. Ang mga larvae ay malinaw na berde at may sukat na hanggang 2.5 sentimetro (cm) ang haba. Ang mga adulto ay naaakit sa ilaw sa gabi; sa araw, kadalasan silang matatagpuan sa mga malilim o damuhang lugar.",
+            "identifying_marks": "ANG mga adulto ay mga matingkad na kayumangging gamu-gamo na may pakpak na 12-20mm ang lapad. Ang madilim na terminal band ay naglalarawan sa panlabas na gilid ng mga pakpak. Ang mga larvae ay malinaw na berde at may sukat na hanggang 2.5 sentimetro (cm) ang haba. Ang mga adulto ay naaakit sa ilaw sa gabi; sa araw, kadalasan silang matatagpuan sa mga malilim o damuhang lugar.",
             "where_to_find": "Ang mga leaffolders ay matatagpuan sa lahat ng kapaligiran ngunit sagana sa panahon ng tag-ulan. Ang mataas na kahalumigmigan, malilim na lugar ng bukid, at labis na paggamit ng mga nitrogenous fertilizers ay nakakapagpadami ng kanilang populasyon.",
             "damage": "Ang mga leaffolders ay pumipinsala sa yugto ng larvae. Ang mga halaman ay sensitibo sa atake hanggang 10 linggo matapos ang pagtatanim (i.e., mula sa seedling hanggang pamumulaklak). Karaniwang nagaganap ang infestasyon sa mga maagang yugto ng paglaki ng palay. Ang mga larvae ay sumisira sa mga dahon ng batang halaman; ikinakabit nila ang gilid ng isang dahon at naninirahan sa loob ng pinagsama-samang dahon. Ang matinding infestasyon ay nagiging sanhi ng pagkasunog, pagkakasakit, at tila patpat na anyo ng halaman.",
             "life_cycle": "Ang mga itlog ay inilalagay ng isa-isa o pares sa mga batang dahon. Ang mga ito ay patag, hugis-itlog, at maputlang dilaw. Ang mga itlog ay napipisa sa larvae sa loob ng 4-7 araw. Ang malinaw na berde, payat na larvae ay kumakain sa loob ng mga pinagsama-samang dahon sa loob ng 15-25 araw bago magpupupa. Ang mga adulto ay lumalabas sa loob ng 6-8 araw mula sa pupa. Ang kabuuang cycle ng buhay ay tumatagal ng 25-52 araw. Para sa mga adulto na gamu-gamo, ang potensyal na mapagkukunan ng asukal sa bukid ay ang honeydew na inilalabas ng mga planthoppers.",
@@ -156,7 +156,7 @@
             }
         },
         {
-            "name":"Rice Whorl Maggot",
+            "name":"Whorl Maggot",
             "tagalog_name":"Langaw palay, Langaw bukid",
             "identifying_marks": "Ang mga adultong langaw ay mapusyaw na kulay abong. Ang mga babae ay may sukat na 1.8mm-2.3mm ang haba. Ang mga lalaki ay bahagyang mas maikli.",
             "where_to_find": "Ito ay isang peste ng mga punla ng palay lamang sa ilalim ng patubig at sa mga kondisyon ng ulan. Ang mga adulto ay mas gusto ang mga lawa, batis, ilog, at mga palayan na irigado para sa kanilang pag-aanak. Ito ay dahil natutukoy ng mga adulto ang mga palayan sa pamamagitan ng nasasalamin na sikat ng araw mula sa ibabaw ng tubig. Kaya't ang mga bukid na direct-seeded o seedbeds ay hindi seryosong nasisira. Ang mga tanim na palay na may banig ng azolla sa ibabaw ng tubig ay pumipigil sa pag-itlog ng mga adultong langaw. Bukod dito, kapag nagsara na ang canopy ng halaman, hindi na nila matatagpuan ang palay. Ang mga palay na lumago sa patuloy na nakatindig na tubig sa loob ng unang 3-4 na linggo pagkatapos ng pagtatanim ay mas nasisira kaysa sa mga tanim na nasa bukid kung saan ang lupa ay bahagyang nabasa lamang. Kapag ang mga batang halaman ay sabay na na-stress ng alinman sa mga kakulangan sa mineral ng lupa o mga toxicities at iba pang mga biotic stresses (caseworm o stem borer), ang mga halaman na nasira ng whorl maggots ay hindi na makakabawi; at samakatuwid, ang pagkalugi sa ani ay magiging mataas.",
@@ -184,6 +184,105 @@
                     "Ang kontrol sa maggot sa punlaan ay mas mura. I-treat ang mga punla sa pamamagitan ng pagbabad ng magdamag sa isang slurry ng systemic insecticide at zinc oxide (ZnO2) powder solution bago itanim.",
                     "I-broadcast ang mga granules o haluin ang mga systemic granules sa huling pag-aararo bago itanim.",
                     "Ang foliar sprays ay epektibo lamang sa 1-2 linggo pagkatapos ng pagtatanim (WAT)."
+                ]
+            }
+        },
+        {
+            "name":"Aphids",
+            "tagalog_name":"Aplat (Ilocano) at Dugos dugos (Cebuano)",
+            "identifying_marks": "Ang mga aphids ay mayroong kulay berde na katawan at may halong itim at berde naman ang ulo. Parehas na mga inakay at magugulang na aphids ang nagdudulot ng pinsala sa mais.",
+            "where_to_find": "Ang mga aphids ay mayroong kulay berde na katawan at may halong itim at berde naman ang ulo. Parehas na mga inakay at magugulang na aphids ang nagdudulot ng pinsala sa mais. Nagdadala ito ng sakit na Maize mosaic virus (MMV) at Maize Stripe Virus (MSpV). Sinisipsip ng aphids ang mga malalambot at murang bahagi halaman na nagiging sanhi ng pagkulubot ng mga mga batang dahon, paninilaw at pagkatuyot.",
+            "damage": "Ang corn aphids ay may kakayahang magpalabas ng malalagkit na pulot o 'honeydew' sa kanilang katawan na siya namang gustong-gusto ng mga langgam. Ang pulot na ito ay inaamag at nagiging dahilan ng pagkakaroon ng 'sooty mold'. Ito naman ang nagiging sanhi ng pangingitim ng mga dahon at tangkay ng mais. Ang malalang kaso ng pagsipsip ng napakaraming aphids ay maaari ding makaapekto sa photosynthesis ng mga dahon at polinasyon ng halaman. Maaari rin itong maka-apekto sa tuloy tuloy na paglaki ng mais",
+            "life_cycle": "Ang lifecycle ng aphids ay binubuo ng dalawang pangunahing yugto: ang yugto ng nymph, kung saan nananatili at kumakain ito sa isang bahagi ng halaman katulad ng ginagawa ng mga adulto, at ang yugto ng adulto, kung saan ang mga babae ay maaaring magparami nang hindi nangangailangan ng mga lalaki.",
+            "management": {
+                "Cultural": [
+                    "Magpatupad ng crop rotation gamit ang mga pananim na hindi kabilang sa pamilya ng damo (non-graminae).",
+                    "Alisin ang mga damo na maaaring maging alternatibong host ng peste at sakit."
+                ],
+                "Biological": [
+                    "Palaganapin ang green lacewing, isang kapaki-pakinabang na insekto na kumakain ng aphids.",
+                    "Gumamit ng mga entomopathogenic fungi tulad ng Metarhizium anisopliae o Beauveria bassiana. Ang mga fungi na ito ay maaaring makuha sa Regional Crop Protection Center Laboratory sa BABRC, Dontogan, Green Valley, Baguio City."
+                ],
+                "Chemical": [
+                    "LAMBDACYHALOTHRIN (3A) (halimbawa: Zulpac Lambda 2.5 EC, Unique 2.5 EC, FLARE 2.5 EC, Agrisolutions Polaris Lambda 2.5EC, Sumo 2.5 EC, Spectra 2.5 EC, Akchlothrin 2.5 EC, at iba pa).",
+                    "MALATHION (1B) (halimbawa: Ace Malathion 57 EC, Agchem Malathion 57 EC, ABC Malathion 57 EC, Farmers Malathion 57 EC).",
+                    "Gumamit ng pestisidyo nang naaayon sa mga tagubilin sa label. Ang patuloy na paggamit ng mga broad-spectrum insecticides ay maaaring makasira sa populasyon ng mga kapaki-pakinabang na insekto, na maaaring magdulot ng muling pagsiklab ng aphids.",
+                    "Mag-apply lamang ng kemikal kung 10% ng maisan ay infest ng aphids (ang bawat tenga ng mais na may higit sa 20 aphids ay itinuturing na infest).",
+                    "Iwasan ang paulit-ulit na paggamit ng parehong aktibong sangkap. Magpalit ng pestisidyo batay sa Mode of Action Number upang maiwasan ang resistensya ng mga peste sa kemikal."
+                ]
+            }
+        },
+        {
+            "name":"Black Cutworm",
+            "tagalog_name":"Limas, Dimas, Ulod, Iges ti bunobon, Tagustos",
+            "identifying_marks": "Ang mga itlog ng cutworm ay inilalagak ng lupon sa ibabaw ng dahon at nababalutan ng mapusyaw na kulay kapeng bulo. Ang mga uod ay mayroong itim ng batik sa ikatlong hati sa likod ng kaniyang katawan. Nagluluno ng limang beses ang uod bago pumunta sa lupa upang maging uod tulog o maging pupa. Ang mga inahin ay karaniwan kulay kape na may mga puting marka sa pakpak.",
+            "where_to_find": "Karaniwang matatagpuan ang larvae ng black cutworm sa lupa, kung saan sila ay nagbuburrow upang kumain sa mga ugat at tangkay ng mga pananim tulad ng mais, trigo, tabako, at iba't ibang gulay.",
+            "damage": "Ang mga larvae ng black cutworm ay pangunahing nagdudulot ng pinsala sa pamamagitan ng pagkain sa mga ugat at mababang tangkay ng mga pananim. Maaari nilang putulin ang mga batang tangkay ng mais na nasa o malapit sa ibabaw ng lupa. Ang ganitong pinsala ay nagdudulot ng wilting, pagka-stunted na paglago, at maaaring magresulta sa pagkamatay ng mga halaman.",
+            "life_cycle": "Ang mga itlog ay inilalagay nang pangkat-pangkat sa base at ilalim ng mga dahon. Ito ay napipisa makalipas ang 3-4 na araw, at ang mga uod ay dumaraan sa limang yugto ng paglaki. Ang mga uod ay kulay rosas-kayumanggi na may mga batik sa likod. Sa unang yugto, kumakain ang mga uod sa mga whirl ng dahon, ngunit habang lumalaki, lumilipat sila sa tassel (mga lalaking bulaklak) at sa tenga ng mais, kung saan kinakain nila ang silk (mga babaeng bulaklak) at kernels. Sa huling yugto, nagbubutas ang mga uod sa tangkay upang kumain. Pagkatapos ng 3-4 na linggong pagkain, bumubuo ang mga uod ng mga pupa sa loob ng mga tangkay, at ang yugtong ito ay tumatagal ng 7-9 na araw bago lumabas ang gamu-gamo.",
+            "management": {
+                "Cultural": [
+                    "Magsagawa ng maagang pagbubungkal ng lupa bago ang pagtatanim upang maputol ang habitat ng mga cutworm at ma-expose ang mga ito sa mga natural na predator.",
+                    "Panatilihin ang kalinisan ng taniman sa pamamagitan ng pagtanggal ng mga damo na maaaring maging taguan ng cutworm.",
+                    "Iwasan ang sobrang pagdidilig upang hindi magbigay ng kanais-nais na kondisyon para sa cutworm."
+                ],
+                "Biological": [
+                    "Gumamit ng mga natural na kaaway tulad ng parasitoid wasps at ground beetles upang bawasan ang populasyon ng cutworm.",
+                    "Mag-apply ng entomopathogenic nematodes gaya ng *Steinernema carpocapsae* para sa organikong kontrol."
+                ],
+                "Chemical": [
+                    "Mag-spray ng insecticides na may aktibong sangkap tulad ng Lambda-Cyhalothrin kung kinakailangan lamang at sa maagang yugto ng cutworm upang maiwasan ang labis na pinsala.",
+                    "Gumamit ng pain na may pesticide upang epektibong ma-target ang mga cutworm na nagtatago sa lupa sa araw."
+                ]
+            }
+        },
+        {
+            "name":"Army worm",
+            "tagalog_name":"Harabas",
+            "identifying_marks": "Sa yugto ng larvae, ang armyworm ay karaniwang may haba na 1 1/2 hanggang 2 pulgada. Ang kanilang ulo ay maaaring mag-iba ang kulay ngunit may kakaibang tanda na pabaliktad na 'Y'. Ang katawan ng larvae ay may mga guhit na berde, dilaw, pula, o kayumanggi sa kanilang mga gilid at likod. Ang mga adult na armyworm moths ay may sukat na humigit-kumulang 1 1/2 pulgada ang lapad. Ang kanilang mga harapang pakpak ay madilim na kulay abo na may magagaan at madilim na mga mantsa, habang ang mga hulihang pakpak ay maputlang kulay abong puti.",
+            "where_to_find": "Ang mga adultong armyworm ay kumakain ng nektar ng halaman at hindi nagdudulot ng banta sa mga pananim. Gayunpaman, ang mga larvae ay pangunahing kumakain ng mga damo at minsan ay nagiging makabuluhang peste sa mga cereal tulad ng maliit na butil, mais, palay, forage grasses, at damo sa mga damuhan. Kapag ang kanilang mga paboritong pagkain ay nauubos dahil sa malalaking populasyon, ang larvae ay maaaring kumain at magpatuloy sa pag-unlad sa iba't ibang uri ng broadleaf na halaman.",
+            "damage": "Ang maliliit na kayumangging bahagi ng damuhan ay kadalasang unang palatandaan ng problema sa armyworm. Ang mga peste ay maaaring mag-iwan ng punit-punit na mga dahon ng damo o kagatin lamang ang berdeng layer, na nagdudulot ng hitsurang parang 'transparent na bintana.' Ang damo ay maaaring matanggal hanggang sa lupa, na nag-iiwan ng mga kalbong bahagi sa damuhan. Kapag kumakain ng mais at iba pang halaman na may mas malalaking dahon, ang mga peste ay maaaring mag-iwan ng hanay ng mga butas na magkakatugma.",
+            "life_cycle": "Ang siklo ng buhay ng armyworm sa Pilipinas ay binubuo ng apat na yugto: itlog, uod, pupa, at gamu-gamo. Nangitlog ang mga babaeng gamu-gamo sa mga halamang host tulad ng damo, mais, at palay, na napipisa sa loob ng ilang araw. Ang mga uod ay pinakamapinsala, kumakain ng dahon, tangkay, at bunga ng mga pananim sa loob ng 2-3 linggo, lalo na sa huling 10 araw ng yugtong ito. Pagkatapos, bumabaon sila sa lupa para magpupa sa loob ng 1-2 linggo, at kalaunan ay nagiging gamu-gamo na muli ay mag-aanak at uulit ng siklo. Ang kanilang mabilis na pagdami ay karaniwang nagaganap sa panahon ng tag-ulan at iba pang kondisyong paborable.",
+            "management": {
+                "Cultural": [
+                    "Ang maagang pagtatanim o paggamit ng mabilis na tumubong uri ng pananim ay makakatulong na maprotektahan ang mas batang halaman mula sa pinsala ng armyworms habang tumataas ang kanilang populasyon sa mas huling bahagi ng panahon​.",
+                    "Ang pagpapalit ng uri ng pananim kada season ay maaaring magpababa sa survival ng armyworms dahil hindi lahat ng pananim ay angkop sa kanilang pagkain.",
+                    "Tanggalin ang mga damong ligaw na maaaring magsilbing tirahan o pagkain ng armyworms, lalo na ang mga nasa paligid ng bukid o taniman​.",
+                    "Magmasid nang maaga at regular sa pananim para matukoy agad ang presensya ng larvae o pinsala, tulad ng pagkakaroon ng butas sa dahon.",
+                    "Ang neem oil at Bacillus thuringiensis (Bt) ay natural at ligtas na paraan upang kontrolin ang armyworms habang hindi nakakaapekto sa kalikasan at iba pang organismo."
+                ],
+                "Biological": [
+                    "Ang mga parasitoid tulad ng Cotesia sp. at Chelonus sp. ay maaaring makatulong sa pagkontrol ng army worm sa pamamagitan ng pagpapalagay sa kanilang mga itlog sa katawan ng peste.",
+                    "Ang Bacillus thuringiensis (Bt) ay isang natural na bakterya na maaaring patalsikin ang mga larva ng army worm nang hindi nakakaapekto sa iba pang organismo.",
+                    "Pagpapalakas ng populasyon ng mga natural na kaaway tulad ng mga ibon, paru-paro, zombee, at iba pang insekto na kumakain ng army worm.",
+                    "Ang mga fungi tulad ng Beauveria bassiana at Metarhizium anisopliae ay maaaring magdulot ng sakit sa mga army worm nang hindi nakakaapekto sa iba pang mga organismo sa kapaligiran.",
+                    "Paggamit ng mga ekstrak mula sa mga halaman tulad ng neem, kakawate, at iba pang lokal na halaman na may natural na insecticide na katangian."
+                ],
+                "Chemical": [
+                    "Ang DA ay nagbigay din ng mga ahenteng biyolohikal tulad ng Trichogramma chilonis upang sugpuin ang mga itlog ng armyworm at Metarhizium species laban sa larvae. Bagama't hindi direktang kemikal, ito'y isinasaalang-alang bilang bahagi ng integrated pest management dahil ini-aaplay sa tanim",
+                    "Ang paggamit ng pheromone lures ay nakakatulong sa pagkontrol sa adult moths ng armyworm. Pinapababa nito ang kanilang populasyon sa pamamagitan ng pagsilo sa kanila bago sila makapangitlog"
+                ]
+            }
+        },
+        {
+            "name":"Corn Borer",
+            "tagalog_name":"Dalipog (Ilokano)",
+            "identifying_marks": "Ang babae ay kulay dilaw na kayumanggi na may mga hindi regular na guhit sa mga pakpak; ang lalaki naman ay mas madilim. Ang haba ng pakpak ay 20-20 mm; ang mga babae ay bahagyang mas malaki kaysa sa mga lalaki. Ang insekto ay mahusay maglipad.",
+            "where_to_find": "Ang mais, kabilang ang sweet corn, luya, at sorghum, ang pangunahing host ng peste, ngunit ito rin ay natatagpuan sa capsicum at tubo. Kamakailan, ito rin ay naging peste ng bulak. Naitala rin ang pag-atake nito sa mais sa Solomon Islands.",
+            "damage": "Maaari makakita ng maliliit at madilim na butas ng pagpasok sa tangkay o mga pods. Karaniwan ding may naipong dumi o frass sa paligid ng mga butas na ito. Ang mga tangkay at dahon sa itaas ng butas ng pagpasok ay nalalanta. Kapag natapos ang pagkain, ang pagpapapupa ay nagaganap sa loob ng tangkay o mung bean pod. Depende sa temperatura, maaaring magkaroon ng maraming henerasyon sa isang taniman.",
+            "life_cycle": "Ang siklo ng buhay ng peste ay tumatagal ng 27-46 araw, na may karaniwang haba na 37.50 araw. Ang mga itlog ay inilalagay ng pangkat sa ilalim ng mga dahon. Ang panahon ng itlog ay 3-4 na araw. Mayroong limang larval instars, at ang tagal ng bawat instar ay 3-7 araw. Ang yugto ng pupa ay tumatagal ng 7-9 araw, at ang yugto ng moth ay tumatagal ng 2-7 araw.",
+            "management": {
+                "Cultural": [
+                    "Magsagawa ng crop rotation gamit ang mga non-host na pananim tulad ng legume crops upang mabawasan ang populasyon ng corn borer.",
+                    "Tiyaking maayos ang pagkakababad at pagkasira ng mga nalalabing tangkay o stubble pagkatapos ng ani upang patayin ang mga overwintering larva.",
+                    "Maglagay ng tamang distansya sa pagtatanim upang mapabuti ang daloy ng hangin at bawasan ang stress ng tanim na nagpapadali sa infestation."
+                ],
+                "Biological": [
+                    "Pakawalan ang parasitoid wasps tulad ng *Trichogramma spp.* na epektibo sa pag-atake ng mga itlog ng corn borer.",
+                    "Mag-apply ng entomopathogenic fungi tulad ng *Beauveria bassiana* upang ma-control ang mga larva sa natural na paraan."
+                ],
+                "Chemical": [
+                    "Gumamit ng insecticides na may aktibong sangkap tulad ng Chlorantraniliprole o Lambda-Cyhalothrin kapag ang threshold ng infestation ay naabot.",
+                    "Mag-spray ng systemic insecticides bago pa man magsimula ang egg-laying period ng moth upang maiwasan ang pag-atake ng larva."
                 ]
             }
         }

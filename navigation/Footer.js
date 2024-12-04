@@ -2,6 +2,7 @@ import React from 'react';
 import { View, StyleSheet, TouchableOpacity, Dimensions, Text } from 'react-native';
 import { useNavigation, useNavigationState } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
+
 import {
   useFonts,
   Lora_400Regular,
@@ -23,23 +24,22 @@ const Footer = () => {
     Lora_500Medium_Italic,
     Lora_600SemiBold_Italic,
     Lora_700Bold_Italic,
-    
   });
+
   const navigation = useNavigation();
-  
-  // Get the current route name from the tab navigator's navigation state
+
+  // Get the current route name
   const currentRouteName = useNavigationState((state) => {
     const route = state.routes[state.index];
     return route.state ? route.state.routes[route.state.index].name : route.name;
   });
 
-
   // Route names for navigation
-  const routeNames = ['HomeScreen', 'CameraScreen', 'DigibookNavigator'];
+  const routeNames = ['HomeScreen', 'SpeechScreen', 'CameraScreen', 'DigibookNavigator' ];
   
   // Custom display names for the footer
-  const displayNames = ['Home', 'Kuhanan', 'DigiBook']; // Custom display names
-  const iconNames = ['home', 'camera', 'book'];
+  const displayNames = ['Home', 'Speech', 'Kuhanan', 'DigiBook'];
+  const iconNames = ['home', 'mic', 'camera', 'book'];
 
   const handlePress = (screenName) => {
     console.log('Attempting to navigate to:', screenName);
@@ -48,8 +48,8 @@ const Footer = () => {
 
   // Get the screen width
   const { width } = Dimensions.get('window');
-  const iconSize = width * 0.065; // Icon size is 8% of screen width
-  const containerHeight = 57; // Height for Android devices
+  const iconSize = width * 0.065; // Adjust dynamically to screen width
+  const containerHeight = 57;
 
   return (
     <View style={[styles.container, { height: containerHeight }]}>
@@ -60,7 +60,7 @@ const Footer = () => {
           style={styles.touchable}
           activeOpacity={0.7}
         >
-          <View style={[styles.iconContainer, { width: iconSize + 60 }]}>
+          <View style={[styles.iconContainer, { width: iconSize + 50 }]}>
             <Ionicons
               name={iconNames[index]}
               size={iconSize}
@@ -68,9 +68,9 @@ const Footer = () => {
             />
             <Text
               style={[styles.routeNameText, currentRouteName === routeName && styles.focusedText]}
-              numberOfLines={1} // Limit to 1 line to prevent wrapping
+              numberOfLines={1}
             >
-              {displayNames[index]} {/* Display the custom text */}
+              {displayNames[index]}
             </Text>
           </View>
         </TouchableOpacity>
@@ -94,18 +94,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     width: '20%',
     height: '100%',
-   
   },
   iconContainer: {
-    
-    
-    flexDirection: 'column', // Stack icon and text vertically
-    justifyContent: 'center', // Center items vertically
-    alignItems: 'center', // Center items horizontally
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
     zIndex: 2,
-    padding: 5, // Optional: Add padding for extra space
-    height: 60, // Adjust height to accommodate icon and text
-    flexWrap: 'nowrap', // Prevent text wrapping
+    padding: 5,
+    height: 60,
+    flexWrap: 'nowrap',
   },
   focusedIcon: {
     color: 'white',
@@ -114,10 +111,10 @@ const styles = StyleSheet.create({
     color: 'gray',
   },
   routeNameText: {
-    fontFamily:'Lora_400Regular',
+    fontFamily: 'Lora_400Regular',
     color: 'gray',
-    fontSize: 12, // Font size for the text
-    textAlign: 'center', // Center the text
+    fontSize: 12,
+    textAlign: 'center',
     width: '100%',
   },
   focusedText: {

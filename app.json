@@ -27,7 +27,8 @@
       },
       "package": "com.lougesite.PestDetection123",
       "permissions": [
-        "CAMERA"
+        "CAMERA",
+        "RECORD_AUDIO"
       ]
     },
     "web": {
@@ -39,8 +40,15 @@
       }
     },
     "plugins": [
-      "expo-font"
-    ],
+  [
+    "@react-native-voice/voice",
+    {
+      "microphonePermission": "Allow PestDigibook to access the microphone",
+      "speechRecognitionPermission": "Allow PestDigibook to securely recognize user speech"
+    }
+  ],
+  "expo-font"
+],
     "owner": "louvree"
   }
 }

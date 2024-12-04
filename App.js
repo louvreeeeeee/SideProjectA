@@ -13,7 +13,7 @@ import SecondInstructionScreen from './screens/SecondInstructionScreen';
 import ThirdInstructionScreen from './screens/ThirdInstructionScreen';
 import Digibook from './screens/Digibook';
 import CameraScreen from './screens/CameraScreen';
-
+import SpeechScreen from './screens/SpeechScreen';
 import RecommendationScreen from './screens/RecommendationScreen';
 import React, { useState, useEffect } from 'react';
 import DigibookNavigator from './screens/DigibookNavigator';
@@ -33,6 +33,7 @@ const TabNavigator = () => {
     >
       
       <Tab.Screen name="HomeScreen" component={HomeScreen} />
+      <Tab.Screen name="SpeechScreen" component={SpeechScreen} />
       <Tab.Screen name="CameraScreen" component={CameraScreen} />
       <Tab.Screen name="DigibookNavigator" component={DigibookNavigator} />
       <Tab.Screen name="RecommendationScreen" component={RecommendationScreen} />
