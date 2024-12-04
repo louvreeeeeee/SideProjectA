@@ -13,9 +13,13 @@ const pestImages = {
   'Brown Planthopper': require('../assets/Pests/brown.jpg'),
   'Rice Bug': require('../assets/Pests/ricebug.jpg'),
   'Green Leafhopper': require('../assets/Pests/green.png'),
-  'Rice Whorl Maggot': require('../assets/Pests/whorl.jpg'),
+  'Whorl Maggot': require('../assets/Pests/whorl.jpg'),
   'Leaffolder': require('../assets/Pests/leaffolder.jpg'),
   'Yellow Stem Borer': require('../assets/Pests/yellow.jpg'),
+  'Corn Borer': require('../assets/Pests/corn_borer_larva.jpg'),
+  'Black Cutworm': require('../assets/Pests/Black_Cutworm_Larva.jpg'),
+  'Army worm': require('../assets/Pests/armyworm-larvae.jpg'),
+  'Aphids': require('../assets/Pests/corn-aphid.jpg'),
 };
 
 function RecommendationScreen() {

@@ -14,9 +14,13 @@ const insects = [
   { name: 'Brown Planthopper', tagalog: '(Kayumangging ngusong kabayo)', image: require('../assets/images/BPH-nobackground.png'), color: '#357B57', iconColor: 'rgba(255, 255, 255, 1)' , textColor: 'white' },
   { name: 'Rice Bug', tagalog: 'Atangya (Tagalog)', image: require('../assets/images/RBG-Blackricebug.png'), color: '#D8EBE1', iconColor: '#357B57', textColor: '#094F29'  },
   { name: 'Green Leafhopper', tagalog: 'Ngusong Kabayo', image: require('../assets/images/RBG-GreenPH3.png'), color: '#357B57', iconColor: 'rgba(255, 255, 255, 1)', textColor: 'white'},
-  { name: 'Rice Whorl Maggot', tagalog: 'Langaw palay', image: require('../assets/images/RBG-WhorlMaggot.png'), color: '#D8EBE1', iconColor: '#357B57', textColor: '#094F29' },
+  { name: 'Whorl Maggot', tagalog: 'Langaw palay', image: require('../assets/images/RBG-WhorlMaggot.png'), color: '#D8EBE1', iconColor: '#357B57', textColor: '#094F29' },
   { name: 'Leaffolder', tagalog: 'Mambibilot o Maniniklup', image: require('../assets/images/RBG-Leaffolder.png'), color: '#357B57', iconColor: 'rgba(255, 255, 255, 1)', textColor: 'white' },
-  { name: 'Yellow Stem Borer', tagalog: 'Dilaw na bagombong', image: require('../assets/images/RBG-YellowStemBorer.png'), color: '#D8EBE1', iconColor: '#357B57' , textColor: '#094F29' }
+  { name: 'Yellow Stem Borer', tagalog: 'Dilaw na bagombong', image: require('../assets/images/RBG-YellowStemBorer.png'), color: '#D8EBE1', iconColor: '#357B57' , textColor: '#094F29' },
+  { name: 'Corn Borer', tagalog: 'Dalipog (Ilokano)', image: require('../assets/images/RBG_corn_borer_larva2.png'), color: '#357B57', iconColor: 'rgba(255, 255, 255, 1)', textColor: 'white'},
+  { name: 'Black Cutworm', tagalog: 'Limas, Dimas, Ulod', image: require('../assets/images/RBG_Black_Cutworm_Larva2.png'), color: '#D8EBE1', iconColor: '#357B57', textColor: '#094F29' },
+  { name: 'Army worm', tagalog: 'Harabas', image: require('../assets/images/RBG_Fall-Armyworm3.png'), color: '#357B57', iconColor: 'rgba(255, 255, 255, 1)', textColor: 'white' },
+  { name: 'Aphids', tagalog: 'Aplat (Ilocano) at Dugos dugos (Cebuano)', image: require('../assets/images/RBG_corn-aphid.png'), color: '#D8EBE1', iconColor: '#357B57' , textColor: '#094F29' }
 ];
 
 
@@ -78,13 +82,13 @@ const styles = StyleSheet.create({
     fontSize:16, 
     color: 'black',
     right: screenWidth * 0.11,
-    top:`-3%`,
+    top: '-2%',
   },
   logo: {
     width: 50,
     height: 50,
     position: 'absolute',
-    top: '3.4%',
+    top: '2%',
     right: '7%',
     resizeMode: 'contain',
     

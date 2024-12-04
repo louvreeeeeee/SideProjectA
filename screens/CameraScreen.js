@@ -4,7 +4,7 @@ import Slider from '@react-native-community/slider';
 import { AntDesign, MaterialIcons } from '@expo/vector-icons';
 import { CameraView, useCameraPermissions } from 'expo-camera';
 import axios from 'axios';
-import pestData from '../pests.json'; // Importing pest data from JSON file
+import pestData from '../assets/pests.json'; // Importing pest data from JSON file
 import GuidebookSection from './GuideBookSection';
 import { PestDetailsModal, ManagementDetailsModal } from './PestDetailsModal'; // Import the modal components
 import { launchImageLibrary } from 'react-native-image-picker';
@@ -26,7 +26,7 @@ const { width: screenWidth , height: screenHeight} = Dimensions.get('window');
         return <Image source={require('../assets/images/BPH-nobackground.png')} style={{ width: screenWidth * 0.13, height: screenHeight * 0.10, right: '10%' }} />;
       case 'green-leafhopper':
         return <Image source={require('../assets/images/RBG-GreenPH4.png')} style={{ width: screenWidth * 0.09, height: screenHeight * 0.11, left: '10%' }} />;
-      case 'leaf-folder':
+      case 'leaffolder':
         return <Image source={require('../assets/images/RBG-Leaffolder.png')} style={{ width: screenWidth * 0.18, height: screenHeight * 0.08, right: '10%' }} />;
       case 'rice-bug':
         return <Image source={require('../assets/images/RBG-Blackricebug.png')} style={{ width: screenWidth * 0.11, height: screenHeight * 0.11, right: '10%' }} />;
@@ -34,29 +34,52 @@ const { width: screenWidth , height: screenHeight} = Dimensions.get('window');
         return <Image source={require('../assets/images/RBG-YellowStemBorer.png')} style={{ width: screenWidth * 0.11, height: screenHeight * 0.11, right: '1%' }} />;
       case 'whorl-maggot':
         return <Image source={require('../assets/images/RBG-WhorlMaggot.png')} style={{ width: screenWidth * 0.1, height: screenHeight * 0.10, right: '1%' }} />;
+      case 'corn-borer':
+        return <Image source={require('../assets/images/RBG_corn_borer_larva2.png')} style={{ width: screenWidth * 0.12, height: screenHeight * 0.19, right: '1%' }} />;
+      case 'black-cutworm':
+        return <Image source={require('../assets/images/RBG_Black_Cutworm_Larva2.png')} style={{ width: screenWidth * 0.11, height: screenHeight * 0.11, right: '10%' }} />;
+      case 'army-worm':
+        return <Image source={require('../assets/images/RBG_Fall-Armyworm3.png')} style={{ width: screenWidth * 0.02, height: screenHeight * 0.18, right: '-4%' }} />;
+      case 'aphids':
+        return <Image source={require('../assets/images/RBG_corn-aphid.png')} style={{ width: screenWidth * 0.1, height: screenHeight * 0.10, right: '-2%' }} />;
       default:
-        return null;
+      return null;
     }
-  };
+  }
 
   const formatClass = (name) => {
-    switch (name) {
+    const normalized = name.toLowerCase().replace(/ /g, '-');
+    switch (normalized) {
       case 'brown-planthopper':
         return "Brown Planthopper";
       case 'green-leafhopper':
         return "Green Leafhopper";
-      case 'leaf-folder':
-        return "Leaf Folder";
+      case 'leaffolder':
+        return "Leaffolder";
       case 'rice-bug':
         return "Rice Bug";
       case 'stem-borer':
         return "Yellow Stem Borer";
       case 'whorl-maggot':
         return "Whorl Maggot";
+      case 'corn-borer':
+        return "Corn Borer";
+      case 'black-cutworm':
+        return "Black Cutworm";
+      case 'army-worm':
+        return "Army worm";
+      case 'aphids':
+        return "Aphids";
       default:
         return name;
+      console.log("Raw detected pest:", selectedPest);
+      console.log("Formatted pest name:", formatClass(selectedPest));
+      console.log("PestData names:", pestData.pests.map(p => p.name));
     }
   };
+
+  
+
 
   const DetectedModal = ({ visible, data = [], onClose }) => {
     const uniqueClasses = Array.from(new Set(data.map(item => item.class)));
@@ -64,6 +87,7 @@ const { width: screenWidth , height: screenHeight} = Dimensions.get('window');
     const [selectedPest, setSelectedPest] = useState(null);
     const navigation = useNavigation();
 
+    console.log("Detected pest classes:", uniqueClasses);
     const openModal = (item) => {
       setSelectedPest(item);
       setShowModal(true);
@@ -77,7 +101,10 @@ const { width: screenWidth , height: screenHeight} = Dimensions.get('window');
     const getPestDetails = (pestName) => {
       //const formattedPestName = formatClass(pestName);
       //const pest = pestData.pests.find(p => formatClass(p.name) === formattedPestName) || {};
-      const pest = pestData.pests.find(p => p.name === formatClass(pestName)) || {};
+      //const pest = pestData.pests.find(p => p.name === formatClass(pestName)) || {}; December 04
+      
+      const normalized = formatClass(pestName);
+      const pest = pestData.pests.find(p => p.name === normalized || p.name.toLowerCase() === pestName.toLowerCase()) || {};
       return {
         name: pest.name || '',
         tagalog_name: pest.tagalog_name || '',
@@ -214,38 +241,61 @@ const CameraScreen = () => {
       );
     }
 
- // Function to handle pest detection
-  const detectPest = async (base64Image) => {
-    setLoading(true);
-    try {
-      const response = await axios({
-        method: "POST",
-        url: "https://detect.roboflow.com/common-rice-pests-philippines/11",
-        params: {
-          api_key: "nckOWyg6wnD7g24gr0Bd",
-        },
-        data: base64Image,
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded"
-        }
-      });
-
-      setLoading(false);
-      const detected = response.data.predictions;
-      if (detected.length !== 0) {
-        setData(detected);
-        setShow(true);
-        setImageUri(null);
-      } else {
-        Alert.alert("No pest detected.");
-        setImageUri(null);
+ // Function to handle pest detection for both rice and corn pests
+const detectPest = async (base64Image) => {
+  setLoading(true);
+  try {
+    // Make parallel requests to both rice and corn pest detection APIs
+    const ricePestResponse = axios({
+      method: "POST",
+      url: "https://detect.roboflow.com/common-rice-pests-philippines/11",
+      params: {
+        api_key: "nckOWyg6wnD7g24gr0Bd",
+      },
+      data: base64Image,
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
       }
-    } catch (error) {
-      setLoading(false);
-      Alert.alert("Sorry. Please try again.");
-      console.log(error.message);
+    });
+
+    const cornPestResponse = axios({
+      method: "POST",
+      url: "https://detect.roboflow.com/corn-pest-zoora/1", 
+      params: {
+        api_key: "9NQzZwZoqUNbkd8JhTci",
+      },
+      data: base64Image,
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      }
+    });
+
+    // Wait for both API responses to come back
+    const [riceResponse, cornResponse] = await Promise.all([ricePestResponse, cornPestResponse]);
+
+    setLoading(false);
+
+    // Process the responses from both APIs
+    const riceDetected = riceResponse.data.predictions;
+    const cornDetected = cornResponse.data.predictions;
+
+    if (cornDetected.length !== 0) {
+      setData(cornDetected); // Display rice pest data
+      setShow(true);
+    } else if (riceDetected.length !== 0) {
+      setData(riceDetected); // Display corn pest data
+      setShow(true);
+    } else {
+      Alert.alert("No pest detected.");
     }
-  };
+    setImageUri(null);
+
+  } catch (error) {
+    setLoading(false);
+    Alert.alert("Sorry. Please try again.");
+    console.log(error.message);
+  }
+};
 
   // Function to launch image picker and detect pest from selected image
   const pickImage = () => {
@@ -336,8 +386,12 @@ const CameraScreen = () => {
         <Image source={{ uri: imageUri }} style={styles.selectedImage} />
       )}
         <LoadingModal visible={loading} />
-        <DetectedModal visible={show} data={data} onClose={closeModal}  />
+        <DetectedModal visible={show} data={data} onClose={closeModal}  
+        
+        />
+      
       </View>
+      
     );
   };
 
