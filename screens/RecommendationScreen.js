@@ -1,7 +1,8 @@
 // PestDetails.js
 import React, { useState, useEffect } from 'react';
 import { View, Text, Image, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons, MaterialIcons } from '@expo/vector-icons';
+import Tts from 'react-native-tts';
 import { useNavigation } from '@react-navigation/native';
 import { useRoute } from '@react-navigation/native';
 
@@ -26,9 +27,36 @@ function RecommendationScreen() {
   const route = useRoute();
   const navigation = useNavigation();
   const { insect } = route.params || {}; // Use fallback to empty object in case params are undefined
-
+  const [isSpeaking, setIsSpeaking] = useState(false);
   const [selectedTab, setSelectedTab] = useState('description');
   const [pestData, setPestData] = useState(null);
+
+  useEffect(() => {
+    // Check TTS initialization
+    Tts.getInitStatus()
+    .then(() => {
+     
+
+      // Set to Tagalog (tl-PH), if not available, fallback to English (en-US)
+      Tts.setDefaultLanguage('fil-PH')
+        .then(() => {
+          
+        })
+        .catch((error) => {
+          console.error('Tagalog not available, falling back to English:', error);
+          Tts.setDefaultLanguage('en-US')
+            .then(() => console.log('Fallback language set to English'))
+            .catch((error) => console.error('Error setting fallback language:', error));
+        });
+    })
+    .catch((error) => {
+      
+      });
+  
+    
+  }, []);
+  
+  
 
   useEffect(() => {
     if (!insect || !insect.name) {
@@ -51,6 +79,37 @@ function RecommendationScreen() {
     }
   }, [insect]);
 
+  const handleSpeak = () => {
+    if (isSpeaking) {
+      // If TTS is speaking, stop it
+      Tts.stop();
+      setIsSpeaking(false);
+    } else {
+      // If TTS is not speaking, start speaking
+      if (pestData) {
+        const textToRead = `Pesteng: ${pestData.name}, O kilala sa tawag na: ${pestData.tagalog_name}. ${selectedTab === 'description' 
+          ? `Para ilarawan ang pesteng eto narito ang: Mga Palatandaan: ${pestData.identifying_marks}. Pinsala: ${pestData.damage}. Saan Matatagpuan: ${pestData.where_to_find}. Life Cycle: ${pestData.life_cycle}` 
+          : `Para pamahalaan ang insektong ito narito ang mga paraan: ` +
+            `Paraang Cultural: ${pestData.management.Cultural?.join(', ') || 'Walang available na cultural management.'}. ` +
+            `Paraang Biological: ${pestData.management.Biological?.join(', ') || 'Walang available na biological management.'}. ` +
+            `Paraang Chemical: ${pestData.management.Chemical?.join(', ') || 'Walang available na chemical management.'}.`
+        }`;
+        
+        Tts.speak(textToRead);
+        setIsSpeaking(true);
+      } else {
+        Tts.speak('Walang datos na makukuha.');
+        setIsSpeaking(true);
+      }
+    }
+  };
+
+  useEffect(() => {
+    return () => {
+      Tts.stop();
+    };
+  }, []);
+  
   // If no insect data was passed or pestData is null, show an error message
   if (!insect || !insect.name || !pestData) {
     return (
@@ -70,13 +129,22 @@ function RecommendationScreen() {
           <Ionicons name="arrow-back" size={29} color="#094F29" />
         </TouchableOpacity>
         <Text style={styles.headerText}>Pest Details</Text>
+        
       </View>
-
       {/* Use statically imported images based on the insect name */}
       <Image source={pestImages[insect.name]} style={styles.image} />
 
+      <View style={styles.titleContainer}>
       <Text style={styles.title}>{pestData.name}</Text>
-      <Text style={styles.subtitle}>{pestData.tagalog_name}</Text>
+      <TouchableOpacity onPress={handleSpeak} style={styles.iconContainer}>
+        <MaterialIcons 
+          name={"volume-up"} 
+          size={27} 
+          color={isSpeaking ? "#094F29" : "#909090"} 
+        />
+      </TouchableOpacity>
+    </View>
+    <Text style={styles.subtitle}>{pestData.tagalog_name}</Text>
 
       {/* Tab selection */}
       <View style={styles.tabContainer}>
@@ -156,9 +224,20 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     padding: 20,
   },
+  titleContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 4, // Adjust spacing as needed
+  },
+  iconContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 5,
+  },  
   header: {
     flexDirection: 'row',
     alignItems: 'center',
+    
   },
   backText: {
     fontSize: 24,
@@ -183,12 +262,15 @@ const styles = StyleSheet.create({
     fontFamily: 'Lora_700Bold',
     fontSize: 24,
     color: '#1F7647',
+    flexShrink: 1,
+    marginRight: 8,
   },
   subtitle: {
     fontFamily: 'Lora_400Regular_Italic',
     fontSize: 16,
     color: '#2A4931',
     marginBottom: 20,
+    flex: 1,
   },
   tabContainer: {
     flexDirection: 'row',
