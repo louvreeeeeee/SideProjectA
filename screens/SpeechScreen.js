@@ -3,20 +3,8 @@ import { StyleSheet, Text, Button, View, Image, TouchableOpacity, ScrollView, Di
 import { useEffect, useState } from 'react';
 import Voice from '@react-native-voice/voice';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import {
-    useFonts,  
-    
-    LeagueSpartan_700Bold,
-    LeagueSpartan_800ExtraBold,
-    LeagueSpartan_900Black,
-  } from '@expo-google-fonts/league-spartan';
-import {
-    LibreBaskerville_400Regular,
-    LibreBaskerville_400Regular_Italic,
-    LibreBaskerville_700Bold,
-  } from '@expo-google-fonts/libre-baskerville';
+import { useNavigation } from '@react-navigation/native';
 
-const { width: screenWidth, height: screenHeight } = Dimensions.get('window'); // Get screen dimensions
 // Preload pest images
 const pestImages = {
   "YELLOW STEM BORER": require('../assets/Speech/yellowstem.png'),
@@ -27,14 +15,15 @@ const pestImages = {
   "LEAFFOLDER": require('../assets/Speech/leaffolder.jpg'),
   "CORN BORER": require('../assets/Speech/corn-borer.jpg'),
   "BLACK CUTWORM": require('../assets/Speech/Cutworm.jpg'),
-  "FALL ARMYWORM": require('../assets/Speech/armyworm.jpg'),
-  "CORN APHIDS": require('../assets/Speech/aphid.jpg'),
+  "ARMY WORM": require('../assets/Speech/armyworm.jpg'),
+  "APHIDS": require('../assets/Speech/aphid.jpg'),
 
   // Tagalog names
   "DILAW NA BAGOMBONG": require('../assets/Speech/yellowstem.png'),
   "ATANGYA": require('../assets/Speech/RiceBlackBug.jpg'),
   "LANGAW PALAY": require('../assets/Speech/whorl.jpeg'),
   "NGUSONG KABAYO": require('../assets/Speech/GREEN.jpg'),
+  "BERDENG NGUSONG KABAYO": require('../assets/Speech/GREEN.jpg'),
   "KAYUMANGGING NGUSONG KABAYO": require('../assets/Speech/brown.png'),
   "MAMBIBILOT": require('../assets/Speech/leaffolder.jpg'),
   "MANINIKLUP": require('../assets/Speech/leaffolder.jpg'),
@@ -44,13 +33,17 @@ const pestImages = {
   "DIMAS": require('../assets/Speech/Cutworm.jpg'),
   "HARABAS": require('../assets/Speech/armyworm.jpg'),
   "APLAT": require('../assets/Speech/aphid.jpg'),
+  "DUGOS DUGOS": require('../assets/Speech/aphid.jpg'),
+  "DUGOS-DUGOS": require('../assets/Speech/aphid.jpg'),
 };
 
 const SpeechScreen = () => {
   const [started, setStarted] = useState(false);
   const [results, setResults] = useState([]);
   const [imageSource, setImageSource] = useState(null);
+  const [detectedPest, setDetectedPest] = useState('');
   const [error, setError] = useState('');
+  const navigation = useNavigation();
 
   useEffect(() => {
     Voice.onSpeechError = onSpeechError;
@@ -64,12 +57,24 @@ const SpeechScreen = () => {
   const startSpeechToText = async () => {
     setResults([]);
     setImageSource(null);
+    setDetectedPest(''); // Reset detected pest
     setError('');
     await Voice.start('en-NZ'); // Change language if needed
-    setStarted(true);
+    setStarted(true);   
 
-     
-  };
+    // Simulate capturing speech results for testing
+  setTimeout(() => {
+    const simulatedPest = "RICE BUG"; // Simulated pest
+    console.log(`Simulated pest detected: ${simulatedPest}`);
+    
+    setResults([simulatedPest]);
+    setImageSource(pestImages[simulatedPest]); // Match simulation image
+    setDetectedPest(simulatedPest); // Set detected pest
+   
+    setStarted(false);
+  }, 1000);
+};
+ 
 
   const stopSpeechToText = async () => {
     await Voice.stop();
@@ -80,6 +85,7 @@ const SpeechScreen = () => {
     if (result.value && result.value.length > 0) {
       let speechText = result.value[0].toUpperCase().trim();
       setResults([speechText]);
+      console.log(`Received speech text: ${speechText}`);
 
       // Post-process speech text
       speechText = postProcessSpeechText(speechText);
@@ -88,13 +94,60 @@ const SpeechScreen = () => {
 
       if (pestImages[speechText]) {
         setImageSource(pestImages[speechText]);
+        setDetectedPest(speechText); // Store detected pest
         setError('');
+        
+        console.log(`Pest detected: ${speechText}`);
+         // Redirect to recommendation screen
+         navigation.navigate('RecommendationScreen', { insect: speechText });
       } else {
         setImageSource(null);
+        setDetectedPest('');
         setError('Pest not recognized. Please mention a valid rice pest.');
       }
     }
   };
+
+  const handleImageClick = () => {
+    if (detectedPest) {
+      // Translation mapping for Tagalog to English pest names
+      const tagalogToEnglish = {
+        "DILAW NA BAGOMBONG": "YELLOW STEM BORER",
+        "ATANGYA": "RICE BUG",
+        "LANGAW PALAY": "WHORL MAGGOT",
+        "NGUSONG KABAYO": "GREEN LEAFHOPPER",
+        "BERDENG NGUSONG KABAYO": "GREEN LEAFHOPPER",
+        "KAYUMANGGING NGUSONG KABAYO": "BROWN PLANTHOPPER",
+        "MAMBIBILOT": "LEAFFOLDER",
+        "MANINIKLUP": "LEAFFOLDER",
+        "DALIPOG": "CORN BORER",
+        "LIMAS": "BLACK CUTWORM",
+        "ULOD": "BLACK CUTWORM",
+        "DIMAS": "BLACK CUTWORM",
+        "HARABAS": "ARMY WORM",
+        "APLAT": "APHIDS",
+        "DUGOS DUGOS": "APHIDS",
+        "DUGOS-DUGOS": "APHIDS",
+      };
+  
+      // Check if detectedPest is a Tagalog name and translate it to English
+      const translatedPest = tagalogToEnglish[detectedPest] || detectedPest;
+  
+      // Format pest name (capitalize first letter of each word)
+      const formattedPestName = translatedPest
+        .toLowerCase()
+        .split(' ')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+  
+      console.log(`Redirecting to recommendation screen with pest: ${formattedPestName}`);
+      navigation.navigate('RecommendationScreen', { insect: { name: formattedPestName } });
+    } else {
+      console.log('No detected pest to pass to the recommendation screen.');
+    }
+  };
+  
+  
 
   // Post-process speech text to handle common misinterpretations
   const postProcessSpeechText = (text) => {
@@ -160,7 +213,11 @@ const SpeechScreen = () => {
       </View>
   
       {/* Display image if pest is recognized */}
-      {imageSource && <Image source={imageSource} style={styles.pestImage} />}
+      {imageSource && (
+        <TouchableOpacity onPress={handleImageClick}>
+          <Image source={imageSource} style={styles.pestImage} />
+        </TouchableOpacity>
+      )}
   
       {/* Display error message if pest is not recognized */}
       {error && <Text style={styles.errorText}>{error}</Text>}
